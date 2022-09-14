@@ -71,25 +71,25 @@
     
     
     <entry>
-      <title>���ʹ�̳�</title>
+      <title>博客搭建教程</title>
       <link href="/posts/1.html"/>
       <url>/posts/1.html</url>
       
-        <content type="html"><![CDATA[<p>׼������:<br>node.js:<br>node -v</p><p>Git:<br>git –version</p><p>Hexo:<br>npm install hexo-cli -g<br>hexo -v</p><p>��github�Ͻ�һ���ֿ�,�ֿ�����:ע����.github.io,Ҳ����yswm-m.github.io<br>Ȼ�������Add a README fileѡ�������</p><p>Ȼ��������һ�����½��ļ���,���ļ������Git Bach Here,����ssh�鿴��Կ�Ƿ�װ,Ȼ������:ssh-keygen -t rsa -C “<a href="mailto:3269661045@qq.com">3269661045@qq.com</a>“,Ȼ��4�λس�<br>��ʱ�ڵ��Ե�C���µ��û��ļ������Ѿ�������һ��.ssh�ļ���,�������id_rsa.pub�ļ���,�����������Կ,�ص�github,�ڸ�����������Setting,Ȼ���ڲ�������SSH and GPG keys,Ȼ����New SSH key��ť<br>����Կ���ƽ�Key��,Title���������,���Add SSH Key����,</p><p>�ص�Git Bach Here����:ssh -T <a href="mailto:git@github.com">git@github.com</a> ������yes,�����Կ�Ƿ����ӳɹ�,Ȼ���˳�Git</p><p>������һ�����½��ļ���������Ų�������,���ļ����������´�Git Bach Here,����hexo init��ʼ�������ļ�</p><p>����hexo s���б��ط���<br>ctrl+c��ֹ���ط���<br>���ļ������_config.yml�ļ�,�޸������deploy�ֶ�Ϊ:<br>deploy:<br>    type: git<br>    repository: ��Ŀ��github�ϵĵ�ַ<br>    branch: main</p><p>���´�Git Bach Here����:npm install hexo-deployer-git –save<br>Ȼ������:hexo g��ȡ��Դ����ҳ��<br>����:hexo d�ϴ��ļ����ֿ�,��һ��������Ҫ����,�ϴ��ɹ������<a href="https://yswm-m.github.io/">https://yswm-m.github.io/</a> �Ϳ��Բ鿴������</p><p>���hexo d�ϴ����ɹ��Ľ���취:<br>���ȵ�һ���������/Blog�ļ����ҵ���ɾ��.deploy_git�ļ���;<br>Ȼ����Git bash����������:<br>git config –global core.autocrlf false<br>hexo clean<br>hexo g<br>hexo d<br>��������еĻ����������˻���֤���������⣬��Ҫ�����룺<br>git config –global user.email “����”<br>git config –global user.name “�û���”<br>����������ϴ�������INFO Deploy done�� git�ʹ����ɹ���</p>]]></content>
+        <content type="html"><![CDATA[<p>准备工具:<br>node.js:<br>node -v</p><p>Git:<br>git –version</p><p>Hexo:<br>npm install hexo-cli -g<br>hexo -v</p><p>在github上建一个仓库,仓库名叫:注册名.github.io,也就是yswm-m.github.io<br>然后将下面的Add a README file选项给勾上</p><p>然后在任意一个盘新建文件夹,在文件夹里打开Git Bach Here,输入ssh查看密钥是否安装,然后输入:ssh-keygen -t rsa -C “<a href="mailto:3269661045@qq.com">3269661045@qq.com</a>“,然后按4次回车<br>这时在电脑的C盘下的用户文件夹里已经生成了一个.ssh文件夹,将里面的id_rsa.pub文件打开,复制里面的密钥,回到github,在个人中心里点击Setting,然后在侧边栏点击SSH and GPG keys,然后点击New SSH key按钮<br>将密钥复制进Key里,Title可以随便填,点击Add SSH Key保存,</p><p>回到Git Bach Here输入:ssh -T <a href="mailto:git@github.com">git@github.com</a> 再输入yes,检查密钥是否添加成功,然后退出Git</p><p>在任意一个盘新建文件夹用来存放博客文章,在文件夹里面重新打开Git Bach Here,输入hexo init初始化博客文件</p><p>输入hexo s运行本地服务<br>ctrl+c终止本地服务<br>打开文件夹里的_config.yml文件,修改里面的deploy字段为:<br>deploy:<br>    type: git<br>    repository: 项目在github上的地址<br>    branch: main</p><p>重新打开Git Bach Here输入:npm install hexo-deployer-git –save<br>然后输入:hexo g拉取资源生成页面<br>输入:hexo d上传文件到仓库,第一次输入需要密码,上传成功后访问<a href="https://yswm-m.github.io/">https://yswm-m.github.io/</a> 就可以查看博客了</p><p>如果hexo d上传不成功的解决办法:<br>首先第一步进入你的/Blog文件夹找到并删除.deploy_git文件夹;<br>然后在Git bash里依次输入:<br>git config –global core.autocrlf false<br>hexo clean<br>hexo g<br>hexo d<br>如果还不行的话，可能是账户认证出现了问题，需要你输入：<br>git config –global user.email “邮箱”<br>git config –global user.name “用户名”<br>最后再试试上传，看见INFO Deploy done： git就代表成功啦</p>]]></content>
       
       
       <categories>
           
-          <category> ���� </category>
+          <category> 生活 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> �뷨 </tag>
+            <tag> 想法 </tag>
             
-            <tag> �̳� </tag>
+            <tag> 教程 </tag>
             
         </tags>
       

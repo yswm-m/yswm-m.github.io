@@ -16,14 +16,14 @@
   </url>
   
   <url>
-    <loc>http://ze520.cn/posts/c1b53692.html</loc>
+    <loc>http://ze520.cn/posts/1.html</loc>
     
     <lastmod>2022-09-14</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/posts/1.html</loc>
+    <loc>http://ze520.cn/posts/c1b53692.html</loc>
     
     <lastmod>2022-09-14</lastmod>
     
@@ -151,28 +151,14 @@
   </url>
   
   <url>
-    <loc>http://ze520.cn/tags/%E4%BA%BA%E7%94%9F/</loc>
-    <lastmod>2022-09-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ze520.cn/tags/%EF%BF%BD%EB%B7%A8/</loc>
-    <lastmod>2022-09-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ze520.cn/tags/%EF%BF%BD%CC%B3%EF%BF%BD/</loc>
-    <lastmod>2022-09-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ze520.cn/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2022-09-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ze520.cn/tags/%E4%BA%BA%E7%94%9F/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -182,13 +168,6 @@
   
   <url>
     <loc>http://ze520.cn/categories/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2022-09-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ze520.cn/categories/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
