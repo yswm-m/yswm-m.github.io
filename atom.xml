@@ -6,7 +6,7 @@
   <link href="http://ze520.cn/atom.xml" rel="self"/>
   
   <link href="http://ze520.cn/"/>
-  <updated>2022-09-14T03:59:28.916Z</updated>
+  <updated>2022-09-14T09:50:36.477Z</updated>
   <id>http://ze520.cn/</id>
   
   <author>
@@ -21,15 +21,16 @@
     <link href="http://ze520.cn/posts/8.html"/>
     <id>http://ze520.cn/posts/8.html</id>
     <published>2022-09-14T03:58:00.000Z</published>
-    <updated>2022-09-14T03:59:28.916Z</updated>
+    <updated>2022-09-14T09:50:36.477Z</updated>
     
-    <content type="html"><![CDATA[<p>文章内容:</p><h3 id="解决dp问题的基础关键"><a href="#解决dp问题的基础关键" class="headerlink" title="解决dp问题的基础关键:"></a><p>解决dp问题的基础关键:</p></h3><p>有限集合求最值:<br>化零为整,所谓化零为整就是解决问题的时候不是一个元素一个元素的去枚举,而是每次枚举一类东西,一个子集<br>子集里的一堆元素…这个就可以看作是一个化零为整的过程,就是把一些有相似点的元素划分成一个子集,然后用<br>某一个状态来表示,这也叫做状态表示。</p><p>状态表示:<br>1、集合:如 f(i),我们要考虑的是 f(i)表示的是哪个集合,这个集合是什么,一般这个集合描述的是所有满足什么<br>什么条件(题目的条件)的方案的集合,这就是f(i)所表示的方案的集合,正是因为f(i)每次可以表示一类集合,而不是<br>一个元素,所以它才可以去优化时间复杂度。<br>例如:一个学校里有2000个人,如果我们要一个一个的去数那么要数2000次,但是如果我们按照一个一个班级去数那就<br>只需要数20次就行了,这就是优化的核心。</p><p>2、属性:一般f(i)里面存的是一个数字,如整数或者浮点数或布尔值,那么存的这个数和这个集合的关系就叫做属性<br>属性一般有三种:max(最大),min(最小),count(数量)。</p><p>状态计算:<br>所谓状态计算就是把状态表示的每一个步骤算出来,状态计算一般对应的是一个化整为零的过程。</p><p>化整为零:<br>所谓化整为零就是先看一下f(i)所表示的所有状态是什么,也就是把f(i)划分成若干个部分,然后每一个<br>部分分别去求,这里把部分叫做子集,这些子集一般要满足两个原则:<br>1.不重复,就是每一个元素只属于其中一个集合<br>2.不遗漏,就是这个子集里所有的元素一定是把f(i)里所有的元素都包含了<br>这样的话当我们想求f(i)的时候只需要分别求出每个子集的值就行了:</p><p>比如说f(i)的属性是最大值,那么只需要求出每一个子集的最大值再在这些最大值里取一个max就可以了。<br>比如说f(i)的属性是数量,那么只需要求出每一个子集的数量再相加就可以了。</p><p>注意:不重复这个原则其实可以不遵守,如果是求数量的话才需要遵守这个原则<br>比如说我们要在三个数 A,B,C里求最大值,那么就先求max(A,B)的最大值,再求max(B,C)的最大值,再把这两个最大<br>值进行一个比较就可以得到三个数的最大值,这里B就重复被用了两次。<br>以上就是化整为零的过程。</p><p>集合的划分:<br>一般划分集合的依据是找最后一个不同点</p><p></p>]]></content>
+    <content type="html"><![CDATA[<p>文章内容:</p><h3 id="解决dp问题的基础关键"><a href="#解决dp问题的基础关键" class="headerlink" title="解决dp问题的基础关键:"></a>解决dp问题的基础关键:</h3><h4>有限集合求最值:化零为整,所谓化零为整就是解决问题的时候不是一个元素一个元素的去枚举,而是每次枚举一类东西,一个子集子集里的一堆元素...这个就可以看作是一个化零为整的过程,就是把一些有相似点的元素划分成一个子集,然后用某一个状态来表示,这也叫做状态表示。<p>状态表示:<br>1、集合:如 f(i),我们要考虑的是 f(i)表示的是哪个集合,这个集合是什么,一般这个集合描述的是所有满足什么<br>什么条件(题目的条件)的方案的集合,这就是f(i)所表示的方案的集合,正是因为f(i)每次可以表示一类集合,而不是<br>一个元素,所以它才可以去优化时间复杂度。<br>例如:一个学校里有2000个人,如果我们要一个一个的去数那么要数2000次,但是如果我们按照一个一个班级去数那就<br>只需要数20次就行了,这就是优化的核心。</p><p>2、属性:一般f(i)里面存的是一个数字,如整数或者浮点数或布尔值,那么存的这个数和这个集合的关系就叫做属性<br>属性一般有三种:max(最大),min(最小),count(数量)。</p><p>状态计算:<br>所谓状态计算就是把状态表示的每一个步骤算出来,状态计算一般对应的是一个化整为零的过程。</p><p>化整为零:<br>所谓化整为零就是先看一下f(i)所表示的所有状态是什么,也就是把f(i)划分成若干个部分,然后每一个<br>部分分别去求,这里把部分叫做子集,这些子集一般要满足两个原则:<br>1.不重复,就是每一个元素只属于其中一个集合<br>2.不遗漏,就是这个子集里所有的元素一定是把f(i)里所有的元素都包含了<br>这样的话当我们想求f(i)的时候只需要分别求出每个子集的值就行了:</p><p>比如说f(i)的属性是最大值,那么只需要求出每一个子集的最大值再在这些最大值里取一个max就可以了。<br>比如说f(i)的属性是数量,那么只需要求出每一个子集的数量再相加就可以了。</p><p>注意:不重复这个原则其实可以不遵守,如果是求数量的话才需要遵守这个原则<br>比如说我们要在三个数 A,B,C里求最大值,那么就先求max(A,B)的最大值,再求max(B,C)的最大值,再把这两个最大<br>值进行一个比较就可以得到三个数的最大值,这里B就重复被用了两次。<br>以上就是化整为零的过程。</p><p>集合的划分:<br>一般划分集合的依据是找最后一个不同点</p></h4>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;文章内容:&lt;/p&gt;
-&lt;h3 id=&quot;解决dp问题的基础关键&quot;&gt;&lt;a href=&quot;#解决dp问题的基础关键&quot; class=&quot;headerlink&quot; title=&quot;解决dp问题的基础关键:&quot;&gt;&lt;/a&gt;&lt;p&gt;解决dp问题的基础关键:&lt;/p&gt;&lt;/h3&gt;&lt;p&gt;有限集合求最值:&lt;br&gt;</summary>
+&lt;h3 id=&quot;解决dp问题的基础关键&quot;&gt;&lt;a href=&quot;#解决dp问题的基础关键&quot; class=&quot;headerlink&quot; title=&quot;解决dp问题的基础关键:&quot;&gt;&lt;/a&gt;解决dp问题的基础关键:&lt;/h3&gt;&lt;h4&gt;有限集合求最值:
+化零为整,所谓化零</summary>
       
     
     
@@ -75,7 +76,7 @@
     <link href="http://ze520.cn/posts/6.html"/>
     <id>http://ze520.cn/posts/6.html</id>
     <published>2022-09-14T01:35:00.000Z</published>
-    <updated>2022-09-14T02:08:42.931Z</updated>
+    <updated>2022-09-14T09:51:17.582Z</updated>
     
     <content type="html"><![CDATA[<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt"># Markdown入门 # *#后面一定要打空格多个#号代表多级标题*# #后面一定要打空格## vscode编写Markdown需要用到的扩展：### Markdown Preview Enhanced *实时看到编写的内容*### Markdown All in One *编写语法*### Paste Image *插入图片*### LimfxCodeEx *快速发表,没啥用*### Code Spell Checker *拼写检查*直接写就是正文  *旧版里空两行才代表换行或者空两格*&lt;!--这个才是注释--&gt;*两个星号代表斜体,快捷键Ctrl+i***四个星号代表加粗,快捷键Ctrl+b*****斜体加粗六个星号***(2) 列表&lt;h4 style="margin-left:200px"&gt;也可以使用html语法&lt;/h4&gt;1. 有序列表2. 1.后面必须要加空格   1. 支持用tab键缩进成二级标题      1. 三级标题       2. 3. h4. 如果要从1开始只需要在列表中间加段落就行了，或者可以在下一行什么都不写又从0开始了- 无序列表&lt;!--无序列表+和*都可以--&gt;- 在-后面必须要有空格  - 也支持tab二级标题    - 三级标题    ==高亮==我是^上标^我是~下标~~~删除线~~&lt;!--用四个波浪线--&gt;---分割线插入图片![](QQ图片20210808153543.jpg) 本地图片网络地址图片![image](https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2022%2F0121%2F42937ad6j00r6224r000mc000hs00e4g.jpg&amp;thumbnail=650x2147483647&amp;quality=80&amp;type=jpg)*快捷键是Ctrl+Alt+v*写公式$$\lim_{x \to \infin}\frac{sin(t)}{x}=1$$也可以在一段文字中插入 $\lim_{x \to \infin}$ 公式，快捷键是Ctrl+m,按两个m可以生成4个$###表格| 小明 | 大明  | 姚明 || ---- | :---: | ---- || 1.5  |  1.7  | 1.9  || 2    |   2   | 2    |一个冒号左对齐，两个冒号右对齐表格在其他编译器里直接Ctrl+T就可以插入###引用&gt;一二三&gt;&gt;三四五&gt;&gt;&gt;六七八###链接这是一个[链接](https://www.douban.com/)https://www.douban.com/ 直接把链接复制黏贴添加到文字上<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>###代码块</p><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;using namespace std;int main(){    //在三个`后面指定语言    printf("Hello,World");    cout&lt;&lt;"Hello,World"&lt;&lt;endl;    return 0;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>可以在右边视图里右键Chrome(Puppeteer)导出成ptf或jpg<br>Ctrl+k+Z 可以进入全屏模式，只要按两下ESC就可以退出</p><h1>代码块</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;using namespace std;int main(){    cout&lt;&lt;"Hello,World"&lt;&lt;endl;    return 0;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">- 无序列表1. 有序2. 列表    3. 三级列表==高亮==小明|大明|姚明--|--|--22|33|44列表<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
     

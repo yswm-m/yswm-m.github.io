@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ze520.cn/posts/7.html</loc>
+    <loc>http://ze520.cn/posts/6.html</loc>
     
     <lastmod>2022-09-14</lastmod>
     
@@ -10,6 +10,13 @@
   
   <url>
     <loc>http://ze520.cn/posts/8.html</loc>
+    
+    <lastmod>2022-09-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ze520.cn/posts/7.html</loc>
     
     <lastmod>2022-09-14</lastmod>
     
@@ -31,13 +38,6 @@
   
   <url>
     <loc>http://ze520.cn/posts/3.html</loc>
-    
-    <lastmod>2022-09-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ze520.cn/posts/6.html</loc>
     
     <lastmod>2022-09-14</lastmod>
     
@@ -158,14 +158,14 @@
 
   
   <url>
-    <loc>http://ze520.cn/tags/%E6%83%B3%E6%B3%95/</loc>
+    <loc>http://ze520.cn/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ze520.cn/tags/%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://ze520.cn/tags/%E6%83%B3%E6%B3%95/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -209,14 +209,14 @@
 
   
   <url>
-    <loc>http://ze520.cn/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <loc>http://ze520.cn/categories/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ze520.cn/categories/%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://ze520.cn/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
