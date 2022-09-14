@@ -6,7 +6,7 @@
   <link href="http://ze520.cn/atom.xml" rel="self"/>
   
   <link href="http://ze520.cn/"/>
-  <updated>2022-09-14T03:52:01.986Z</updated>
+  <updated>2022-09-14T03:59:28.916Z</updated>
   <id>http://ze520.cn/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>动态规划</title>
+    <link href="http://ze520.cn/posts/8.html"/>
+    <id>http://ze520.cn/posts/8.html</id>
+    <published>2022-09-14T03:58:00.000Z</published>
+    <updated>2022-09-14T03:59:28.916Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章内容:</p><h3 id="解决dp问题的基础关键"><a href="#解决dp问题的基础关键" class="headerlink" title="解决dp问题的基础关键:"></a><p>解决dp问题的基础关键:</p></h3><p>有限集合求最值:<br>化零为整,所谓化零为整就是解决问题的时候不是一个元素一个元素的去枚举,而是每次枚举一类东西,一个子集<br>子集里的一堆元素…这个就可以看作是一个化零为整的过程,就是把一些有相似点的元素划分成一个子集,然后用<br>某一个状态来表示,这也叫做状态表示。</p><p>状态表示:<br>1、集合:如 f(i),我们要考虑的是 f(i)表示的是哪个集合,这个集合是什么,一般这个集合描述的是所有满足什么<br>什么条件(题目的条件)的方案的集合,这就是f(i)所表示的方案的集合,正是因为f(i)每次可以表示一类集合,而不是<br>一个元素,所以它才可以去优化时间复杂度。<br>例如:一个学校里有2000个人,如果我们要一个一个的去数那么要数2000次,但是如果我们按照一个一个班级去数那就<br>只需要数20次就行了,这就是优化的核心。</p><p>2、属性:一般f(i)里面存的是一个数字,如整数或者浮点数或布尔值,那么存的这个数和这个集合的关系就叫做属性<br>属性一般有三种:max(最大),min(最小),count(数量)。</p><p>状态计算:<br>所谓状态计算就是把状态表示的每一个步骤算出来,状态计算一般对应的是一个化整为零的过程。</p><p>化整为零:<br>所谓化整为零就是先看一下f(i)所表示的所有状态是什么,也就是把f(i)划分成若干个部分,然后每一个<br>部分分别去求,这里把部分叫做子集,这些子集一般要满足两个原则:<br>1.不重复,就是每一个元素只属于其中一个集合<br>2.不遗漏,就是这个子集里所有的元素一定是把f(i)里所有的元素都包含了<br>这样的话当我们想求f(i)的时候只需要分别求出每个子集的值就行了:</p><p>比如说f(i)的属性是最大值,那么只需要求出每一个子集的最大值再在这些最大值里取一个max就可以了。<br>比如说f(i)的属性是数量,那么只需要求出每一个子集的数量再相加就可以了。</p><p>注意:不重复这个原则其实可以不遵守,如果是求数量的话才需要遵守这个原则<br>比如说我们要在三个数 A,B,C里求最大值,那么就先求max(A,B)的最大值,再求max(B,C)的最大值,再把这两个最大<br>值进行一个比较就可以得到三个数的最大值,这里B就重复被用了两次。<br>以上就是化整为零的过程。</p><p>集合的划分:<br>一般划分集合的依据是找最后一个不同点</p><p></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;文章内容:&lt;/p&gt;
+&lt;h3 id=&quot;解决dp问题的基础关键&quot;&gt;&lt;a href=&quot;#解决dp问题的基础关键&quot; class=&quot;headerlink&quot; title=&quot;解决dp问题的基础关键:&quot;&gt;&lt;/a&gt;&lt;p&gt;解决dp问题的基础关键:&lt;/p&gt;&lt;/h3&gt;&lt;p&gt;有限集合求最值:&lt;br&gt;</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://ze520.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="教程" scheme="http://ze520.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="算法" scheme="http://ze520.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Kali教程</title>
-    <link href="http://ze520.cn/posts/6.html"/>
-    <id>http://ze520.cn/posts/6.html</id>
+    <link href="http://ze520.cn/posts/7.html"/>
+    <id>http://ze520.cn/posts/7.html</id>
     <published>2022-09-14T03:45:00.000Z</published>
-    <updated>2022-09-14T03:52:01.986Z</updated>
+    <updated>2022-09-14T03:59:55.861Z</updated>
     
     <content type="html"><![CDATA[<p>文章内容:</p><p>通过VMware安装kali的linux镜像,可以在<a href="https://www.kali.org/get-kali/">官网</a>上下载,建议选择磁链下载快些<br>修改密码：sudo passwd root 然后输入3次密码<br>进入伪root模式：su root 然后输入密码<br>退出：exit<br>进入真root模式：su - root 然后输入密码<br>pwd 查看家目录<br>隐藏进入root后的提示信息：touch ~/ .hushlogin<br>清屏：clear<br>查看shell的类型：echo $SHELL<br>换源：<br>vim /etc/apt/sources.list<br>进入后把官方自带的源，第2行的源注释掉 #<br>可以在下面输入命令:set nu 查看行号<br>将下面的中科大的源复制到里面最后一行，然后按下esc再输入 :wq 保存并退出<br>deb <a href="http://mirrors.ustc.edu.cn/kali">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>deb-src <a href="http://mirrors.ustc.edu.cn/kali">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>复制技巧，选中内容就视为自动复制，在粘贴的地方按下鼠标的滚轮就可以完成粘贴<br>deb代表软件的位置，deb-src代表软件的源代码位置<br>ctrl+c 强制退出<br>查看可以更新的软件列表 ：apt update<br>更新软件：apt upgrade<br>强制更新软件(可能会有一点兼容性的问题)：dist-upgrade<br>注意：要先获取更新列表再进行更新<br>在设置里电源管理器中可以关闭锁屏<br>安装输入法框架：sudo apt install fcitx<br>安装中文输入法：sudo apt install fcitx-googlepinyin<br>安装完成后重启：reboot<br>打开kali的开始菜单栏，搜索fcitx<br>打开fcitx输入法配置框 ,添加对应输入法<br>取消只展示当前语言输入法<br>点击上移按钮，把google拼音选为默认输入法<br>关机：init 0<br>在vm虚拟机中创建一个快照<br>在w11下按下win+R输入cmd进入dos命令窗口，输入：ipconfig<br>在里面找到无线局域网适配器 WLAN: 下的IPv4 地址和默认网关<br>测试地址的连通性：ping 192.168.0.107 ipv4地址<br>测试网关的连通性：ping 192.168.0.1  默认网关<br>打开kali系统，使用root账号登陆，输入密码<br>输入 ctrl+alt+t 打开终端<br>输入 ctrl+shift+’+’号 把终端字体放大<br>输入vim /etc/network/interfaces 进入ip配置文件<br>按下字母o键 在光标的下一行进行插入<br>输入下面的ip信息：<br>auto eth0<br>iface eth0 inet static<br>address 192.168.0.107<br>netmask 255.255.255.0<br>gateway 192.168.0.1<br>按下esc，输入 :wq 保存退出<br>如果后续改乱了可以输入 :e! 还原回一开始保存的时候<br>关闭网络服务：systemctl stop NetworkManager<br>重启网络服务：systemctl restart networking 注意第一次配置要输入两次<br>输入 ifconfig 查看现在的网络状态<br>通过ping可以查看网络链接的状态是否连通<br>配置dns：vim /etc/resolv.conf<br>将里面的nameserver的dns改成：114.114.114.114<br>ping  baudu.com 进行测试<br>192.168.1.145<br>192.168.1.1</p>]]></content>
     
@@ -130,6 +157,33 @@
   </entry>
   
   <entry>
+    <title>博客搭建教程</title>
+    <link href="http://ze520.cn/posts/2.html"/>
+    <id>http://ze520.cn/posts/2.html</id>
+    <published>2022-09-14T01:14:00.000Z</published>
+    <updated>2022-09-14T02:08:23.103Z</updated>
+    
+    <content type="html"><![CDATA[<p>准备工具:<br>node.js:<br>node -v</p><p>Git:<br>git –version</p><p>Hexo:<br>npm install hexo-cli -g<br>hexo -v</p><p>在github上建一个仓库,仓库名叫:注册名.github.io,也就是yswm-m.github.io<br>然后将下面的Add a README file选项给勾上</p><p>然后在任意一个盘新建文件夹,在文件夹里打开Git Bach Here,输入ssh查看密钥是否安装,然后输入:ssh-keygen -t rsa -C “<a href="mailto:3269661045@qq.com">3269661045@qq.com</a>“,然后按4次回车<br>这时在电脑的C盘下的用户文件夹里已经生成了一个.ssh文件夹,将里面的id_rsa.pub文件打开,复制里面的密钥,回到github,在个人中心里点击Setting,然后在侧边栏点击SSH and GPG keys,然后点击New SSH key按钮<br>将密钥复制进Key里,Title可以随便填,点击Add SSH Key保存,</p><p>回到Git Bach Here输入:ssh -T <a href="mailto:git@github.com">git@github.com</a> 再输入yes,检查密钥是否添加成功,然后退出Git</p><p>在任意一个盘新建文件夹用来存放博客文章,在文件夹里面重新打开Git Bach Here,输入hexo init初始化博客文件</p><p>输入hexo s运行本地服务<br>ctrl+c终止本地服务<br>打开文件夹里的_config.yml文件,修改里面的deploy字段为:<br>deploy:<br>    type: git<br>    repository: 项目在github上的地址<br>    branch: main</p><p>重新打开Git Bach Here输入:npm install hexo-deployer-git –save<br>然后输入:hexo g拉取资源生成页面<br>输入:hexo d上传文件到仓库,第一次输入需要密码,上传成功后访问<a href="https://yswm-m.github.io/">https://yswm-m.github.io/</a> 就可以查看博客了</p><p>如果hexo d上传不成功的解决办法:<br>首先第一步进入你的/Blog文件夹找到并删除.deploy_git文件夹;<br>然后在Git bash里依次输入:<br>git config –global core.autocrlf false<br>hexo clean<br>hexo g<br>hexo d<br>如果还不行的话，可能是账户认证出现了问题，需要你输入：<br>git config –global user.email “邮箱”<br>git config –global user.name “用户名”<br>最后再试试上传，看见INFO Deploy done： git就代表成功啦</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;准备工具:&lt;br&gt;node.js:&lt;br&gt;node -v&lt;/p&gt;
+&lt;p&gt;Git:&lt;br&gt;git –version&lt;/p&gt;
+&lt;p&gt;Hexo:&lt;br&gt;npm install hexo-cli -g&lt;br&gt;hexo -v&lt;/p&gt;
+&lt;p&gt;在github上建一个仓库,仓库名叫:注册名</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://ze520.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="教程" scheme="http://ze520.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>数据结构与算法</title>
     <link href="http://ze520.cn/posts/3.html"/>
     <id>http://ze520.cn/posts/3.html</id>
@@ -157,36 +211,9 @@
     <category term="编程" scheme="http://ze520.cn/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
+    <category term="教程" scheme="http://ze520.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
     <category term="学习" scheme="http://ze520.cn/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="教程" scheme="http://ze520.cn/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客搭建教程</title>
-    <link href="http://ze520.cn/posts/2.html"/>
-    <id>http://ze520.cn/posts/2.html</id>
-    <published>2022-09-14T01:14:00.000Z</published>
-    <updated>2022-09-14T02:08:23.103Z</updated>
-    
-    <content type="html"><![CDATA[<p>准备工具:<br>node.js:<br>node -v</p><p>Git:<br>git –version</p><p>Hexo:<br>npm install hexo-cli -g<br>hexo -v</p><p>在github上建一个仓库,仓库名叫:注册名.github.io,也就是yswm-m.github.io<br>然后将下面的Add a README file选项给勾上</p><p>然后在任意一个盘新建文件夹,在文件夹里打开Git Bach Here,输入ssh查看密钥是否安装,然后输入:ssh-keygen -t rsa -C “<a href="mailto:3269661045@qq.com">3269661045@qq.com</a>“,然后按4次回车<br>这时在电脑的C盘下的用户文件夹里已经生成了一个.ssh文件夹,将里面的id_rsa.pub文件打开,复制里面的密钥,回到github,在个人中心里点击Setting,然后在侧边栏点击SSH and GPG keys,然后点击New SSH key按钮<br>将密钥复制进Key里,Title可以随便填,点击Add SSH Key保存,</p><p>回到Git Bach Here输入:ssh -T <a href="mailto:git@github.com">git@github.com</a> 再输入yes,检查密钥是否添加成功,然后退出Git</p><p>在任意一个盘新建文件夹用来存放博客文章,在文件夹里面重新打开Git Bach Here,输入hexo init初始化博客文件</p><p>输入hexo s运行本地服务<br>ctrl+c终止本地服务<br>打开文件夹里的_config.yml文件,修改里面的deploy字段为:<br>deploy:<br>    type: git<br>    repository: 项目在github上的地址<br>    branch: main</p><p>重新打开Git Bach Here输入:npm install hexo-deployer-git –save<br>然后输入:hexo g拉取资源生成页面<br>输入:hexo d上传文件到仓库,第一次输入需要密码,上传成功后访问<a href="https://yswm-m.github.io/">https://yswm-m.github.io/</a> 就可以查看博客了</p><p>如果hexo d上传不成功的解决办法:<br>首先第一步进入你的/Blog文件夹找到并删除.deploy_git文件夹;<br>然后在Git bash里依次输入:<br>git config –global core.autocrlf false<br>hexo clean<br>hexo g<br>hexo d<br>如果还不行的话，可能是账户认证出现了问题，需要你输入：<br>git config –global user.email “邮箱”<br>git config –global user.name “用户名”<br>最后再试试上传，看见INFO Deploy done： git就代表成功啦</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;准备工具:&lt;br&gt;node.js:&lt;br&gt;node -v&lt;/p&gt;
-&lt;p&gt;Git:&lt;br&gt;git –version&lt;/p&gt;
-&lt;p&gt;Hexo:&lt;br&gt;npm install hexo-cli -g&lt;br&gt;hexo -v&lt;/p&gt;
-&lt;p&gt;在github上建一个仓库,仓库名叫:注册名</summary>
-      
-    
-    
-    
-    <category term="学习" scheme="http://ze520.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="教程" scheme="http://ze520.cn/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
