@@ -6,7 +6,7 @@
   <link href="http://ze520.cn/atom.xml" rel="self"/>
   
   <link href="http://ze520.cn/"/>
-  <updated>2022-09-14T02:08:42.931Z</updated>
+  <updated>2022-09-14T03:52:01.986Z</updated>
   <id>http://ze520.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Kali教程</title>
+    <link href="http://ze520.cn/posts/6.html"/>
+    <id>http://ze520.cn/posts/6.html</id>
+    <published>2022-09-14T03:45:00.000Z</published>
+    <updated>2022-09-14T03:52:01.986Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章内容:</p><p>通过VMware安装kali的linux镜像,可以在<a href="https://www.kali.org/get-kali/">官网</a>上下载,建议选择磁链下载快些<br>修改密码：sudo passwd root 然后输入3次密码<br>进入伪root模式：su root 然后输入密码<br>退出：exit<br>进入真root模式：su - root 然后输入密码<br>pwd 查看家目录<br>隐藏进入root后的提示信息：touch ~/ .hushlogin<br>清屏：clear<br>查看shell的类型：echo $SHELL<br>换源：<br>vim /etc/apt/sources.list<br>进入后把官方自带的源，第2行的源注释掉 #<br>可以在下面输入命令:set nu 查看行号<br>将下面的中科大的源复制到里面最后一行，然后按下esc再输入 :wq 保存并退出<br>deb <a href="http://mirrors.ustc.edu.cn/kali">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>deb-src <a href="http://mirrors.ustc.edu.cn/kali">http://mirrors.ustc.edu.cn/kali</a> kali-rolling main non-free contrib<br>复制技巧，选中内容就视为自动复制，在粘贴的地方按下鼠标的滚轮就可以完成粘贴<br>deb代表软件的位置，deb-src代表软件的源代码位置<br>ctrl+c 强制退出<br>查看可以更新的软件列表 ：apt update<br>更新软件：apt upgrade<br>强制更新软件(可能会有一点兼容性的问题)：dist-upgrade<br>注意：要先获取更新列表再进行更新<br>在设置里电源管理器中可以关闭锁屏<br>安装输入法框架：sudo apt install fcitx<br>安装中文输入法：sudo apt install fcitx-googlepinyin<br>安装完成后重启：reboot<br>打开kali的开始菜单栏，搜索fcitx<br>打开fcitx输入法配置框 ,添加对应输入法<br>取消只展示当前语言输入法<br>点击上移按钮，把google拼音选为默认输入法<br>关机：init 0<br>在vm虚拟机中创建一个快照<br>在w11下按下win+R输入cmd进入dos命令窗口，输入：ipconfig<br>在里面找到无线局域网适配器 WLAN: 下的IPv4 地址和默认网关<br>测试地址的连通性：ping 192.168.0.107 ipv4地址<br>测试网关的连通性：ping 192.168.0.1  默认网关<br>打开kali系统，使用root账号登陆，输入密码<br>输入 ctrl+alt+t 打开终端<br>输入 ctrl+shift+’+’号 把终端字体放大<br>输入vim /etc/network/interfaces 进入ip配置文件<br>按下字母o键 在光标的下一行进行插入<br>输入下面的ip信息：<br>auto eth0<br>iface eth0 inet static<br>address 192.168.0.107<br>netmask 255.255.255.0<br>gateway 192.168.0.1<br>按下esc，输入 :wq 保存退出<br>如果后续改乱了可以输入 :e! 还原回一开始保存的时候<br>关闭网络服务：systemctl stop NetworkManager<br>重启网络服务：systemctl restart networking 注意第一次配置要输入两次<br>输入 ifconfig 查看现在的网络状态<br>通过ping可以查看网络链接的状态是否连通<br>配置dns：vim /etc/resolv.conf<br>将里面的nameserver的dns改成：114.114.114.114<br>ping  baudu.com 进行测试<br>192.168.1.145<br>192.168.1.1</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;文章内容:&lt;/p&gt;
+&lt;p&gt;通过VMware安装kali的linux镜像,可以在&lt;a href=&quot;https://www.kali.org/get-kali/&quot;&gt;官网&lt;/a&gt;上下载,建议选择磁链下载快些&lt;br&gt;修改密码：sudo passwd root 然后输入3次密码&lt;br</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://ze520.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="教程" scheme="http://ze520.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="linux" scheme="http://ze520.cn/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Markdown语法</title>
@@ -40,6 +67,36 @@
     
     
     <category term="教程" scheme="http://ze520.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>人生感悟</title>
+    <link href="http://ze520.cn/posts/4.html"/>
+    <id>http://ze520.cn/posts/4.html</id>
+    <published>2022-09-14T01:33:00.000Z</published>
+    <updated>2022-09-14T03:42:09.547Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章内容:</p><h4>混一天和努力一天，一天看不出任何差别，三天看不到任何变化，七天也看不到任何距离……</h4><h4>但是一个月后会看到话题不同，三个月后会看到气场不同，半年后会看到距离不同，一年后会看到人生道路截然不同。请坚信你所喜爱的事物！</h4><h4>世界上有10种人，一种是懂二进制的，另一种是不懂二进制的~</h4><h4>自卑和傲慢是一回事，你潜意识里瞧不起无能的人，才会觉得别人也可能瞧不起无能的你。</h4><h4>走过弯路，回头才有可能看清直路。人的一生，痛苦和骄傲都应拥有</h4><h4>有很多事，不是你放不下，就一定要勉强举着，这样只会一点点消磨你对它的热爱。——《棋魂》</h4><h4>我深怕自己本非美玉，故而不敢加以刻苦琢磨，却又半信自己是块美玉，故又不肯庸庸碌碌，与瓦砾为伍。于是我渐渐地脱离凡尘，疏远世人，结果便是一任愤懑与羞恨日益助长内心那怯弱的自尊心。</h4><h4>对未来的真正慷慨，是把一切献给现在。——加缪</h4><h4>说花美就会有人说“也有不美的花”。 预想到会有这种抱怨于是写“既有美丽的花也有不美的花”。这已经是废话了。 让所有人都认同的文字称不上表达。表达需要勇气。——铃木光司</h4><h1 id="这是一生雾梦的个人博客"><a href="#这是一生雾梦的个人博客" class="headerlink" title="这是一生雾梦的个人博客"></a>这是一生雾梦的个人博客</h1><h2 id="以后会更新很多的内容"><a href="#以后会更新很多的内容" class="headerlink" title="以后会更新很多的内容"></a>以后会更新很多的内容</h2><h2 id="欢迎你收藏本网址"><a href="#欢迎你收藏本网址" class="headerlink" title="欢迎你收藏本网址"></a>欢迎你收藏本网址</h2><h2 id="有问题请跳转到：百度"><a href="#有问题请跳转到：百度" class="headerlink" title="有问题请跳转到：百度"></a>有问题请跳转到：<a href="https://www.baidu.com/">百度</a></h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;文章内容:&lt;/p&gt;
+&lt;h4&gt;混一天和努力一天，一天看不出任何差别，三天看不到任何变化，七天也看不到任何距离……&lt;/h4&gt;
+&lt;h4&gt;但是一个月后会看到话题不同，三个月后会看到气场不同，半年后会看到距离不同，一年后会看到人生道路截然不同。
+请坚信你所喜爱的事物！&lt;/h4&gt;
+&lt;h</summary>
+      
+    
+    
+    
+    <category term="生活" scheme="http://ze520.cn/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="想法" scheme="http://ze520.cn/tags/%E6%83%B3%E6%B3%95/"/>
+    
+    <category term="人生" scheme="http://ze520.cn/tags/%E4%BA%BA%E7%94%9F/"/>
     
   </entry>
   
@@ -73,63 +130,6 @@
   </entry>
   
   <entry>
-    <title>人生感悟</title>
-    <link href="http://ze520.cn/posts/4.html"/>
-    <id>http://ze520.cn/posts/4.html</id>
-    <published>2022-09-14T01:33:00.000Z</published>
-    <updated>2022-09-14T03:16:46.793Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章内容:</p><h4>混一天和努力一天，一天看不出任何差别，三天看不到任何变化，七天也看不到任何距离……</h4><h4>但是一个月后会看到话题不同，三个月后会看到气场不同，半年后会看到距离不同，一年后会看到人生道路截然不同。请坚信你所喜爱的事物！</h4><h4>世界上有10种人，一种是懂二进制的，另一种是不懂二进制的~</h4><h4>自卑和傲慢是一回事，你潜意识里瞧不起无能的人，才会觉得别人也可能瞧不起无能的你。</h4><h4>走过弯路，回头才有可能看清直路。人的一生，痛苦和骄傲都应拥有</h4><h4>有很多事，不是你放不下，就一定要勉强举着，这样只会一点点消磨你对它的热爱。——《棋魂》</h4><h4>我深怕自己本非美玉，故而不敢加以刻苦琢磨，却又半信自己是块美玉，故又不肯庸庸碌碌，与瓦砾为伍。于是我渐渐地脱离凡尘，疏远世人，结果便是一任愤懑与羞恨日益助长内心那怯弱的自尊心。</h4><h4>对未来的真正慷慨，是把一切献给现在。——加缪</h4><h4>说花美就会有人说“也有不美的花”。 预想到会有这种抱怨于是写“既有美丽的花也有不美的花”。这已经是废话了。 让所有人都认同的文字称不上表达。表达需要勇气。——铃木光司</h4><h1 id="这是一生雾梦的个人博客"><a href="#这是一生雾梦的个人博客" class="headerlink" title="这是一生雾梦的个人博客"></a>这是一生雾梦的个人博客</h1><h2 id="以后会更新很多的内容"><a href="#以后会更新很多的内容" class="headerlink" title="以后会更新很多的内容"></a>以后会更新很多的内容</h2><h2 id="欢迎你收藏本网址"><a href="#欢迎你收藏本网址" class="headerlink" title="欢迎你收藏本网址"></a>欢迎你收藏本网址</h2><h2 id="有问题请跳转到：百度"><a href="#有问题请跳转到：百度" class="headerlink" title="有问题请跳转到：百度"></a>有问题请跳转到：<a href="https://www.baidu.com/">百度</a></h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;文章内容:&lt;/p&gt;
-&lt;h4&gt;混一天和努力一天，一天看不出任何差别，三天看不到任何变化，七天也看不到任何距离……&lt;/h4&gt;
-&lt;h4&gt;但是一个月后会看到话题不同，三个月后会看到气场不同，半年后会看到距离不同，一年后会看到人生道路截然不同。
-请坚信你所喜爱的事物！&lt;/h4&gt;
-&lt;h</summary>
-      
-    
-    
-    
-    <category term="生活" scheme="http://ze520.cn/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-    <category term="想法" scheme="http://ze520.cn/tags/%E6%83%B3%E6%B3%95/"/>
-    
-    <category term="人生" scheme="http://ze520.cn/tags/%E4%BA%BA%E7%94%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客搭建教程</title>
-    <link href="http://ze520.cn/posts/2.html"/>
-    <id>http://ze520.cn/posts/2.html</id>
-    <published>2022-09-14T01:14:00.000Z</published>
-    <updated>2022-09-14T02:08:23.103Z</updated>
-    
-    <content type="html"><![CDATA[<p>准备工具:<br>node.js:<br>node -v</p><p>Git:<br>git –version</p><p>Hexo:<br>npm install hexo-cli -g<br>hexo -v</p><p>在github上建一个仓库,仓库名叫:注册名.github.io,也就是yswm-m.github.io<br>然后将下面的Add a README file选项给勾上</p><p>然后在任意一个盘新建文件夹,在文件夹里打开Git Bach Here,输入ssh查看密钥是否安装,然后输入:ssh-keygen -t rsa -C “<a href="mailto:3269661045@qq.com">3269661045@qq.com</a>“,然后按4次回车<br>这时在电脑的C盘下的用户文件夹里已经生成了一个.ssh文件夹,将里面的id_rsa.pub文件打开,复制里面的密钥,回到github,在个人中心里点击Setting,然后在侧边栏点击SSH and GPG keys,然后点击New SSH key按钮<br>将密钥复制进Key里,Title可以随便填,点击Add SSH Key保存,</p><p>回到Git Bach Here输入:ssh -T <a href="mailto:git@github.com">git@github.com</a> 再输入yes,检查密钥是否添加成功,然后退出Git</p><p>在任意一个盘新建文件夹用来存放博客文章,在文件夹里面重新打开Git Bach Here,输入hexo init初始化博客文件</p><p>输入hexo s运行本地服务<br>ctrl+c终止本地服务<br>打开文件夹里的_config.yml文件,修改里面的deploy字段为:<br>deploy:<br>    type: git<br>    repository: 项目在github上的地址<br>    branch: main</p><p>重新打开Git Bach Here输入:npm install hexo-deployer-git –save<br>然后输入:hexo g拉取资源生成页面<br>输入:hexo d上传文件到仓库,第一次输入需要密码,上传成功后访问<a href="https://yswm-m.github.io/">https://yswm-m.github.io/</a> 就可以查看博客了</p><p>如果hexo d上传不成功的解决办法:<br>首先第一步进入你的/Blog文件夹找到并删除.deploy_git文件夹;<br>然后在Git bash里依次输入:<br>git config –global core.autocrlf false<br>hexo clean<br>hexo g<br>hexo d<br>如果还不行的话，可能是账户认证出现了问题，需要你输入：<br>git config –global user.email “邮箱”<br>git config –global user.name “用户名”<br>最后再试试上传，看见INFO Deploy done： git就代表成功啦</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;准备工具:&lt;br&gt;node.js:&lt;br&gt;node -v&lt;/p&gt;
-&lt;p&gt;Git:&lt;br&gt;git –version&lt;/p&gt;
-&lt;p&gt;Hexo:&lt;br&gt;npm install hexo-cli -g&lt;br&gt;hexo -v&lt;/p&gt;
-&lt;p&gt;在github上建一个仓库,仓库名叫:注册名</summary>
-      
-    
-    
-    
-    <category term="学习" scheme="http://ze520.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="教程" scheme="http://ze520.cn/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>数据结构与算法</title>
     <link href="http://ze520.cn/posts/3.html"/>
     <id>http://ze520.cn/posts/3.html</id>
@@ -157,9 +157,36 @@
     <category term="编程" scheme="http://ze520.cn/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
+    <category term="学习" scheme="http://ze520.cn/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
     <category term="教程" scheme="http://ze520.cn/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="学习" scheme="http://ze520.cn/tags/%E5%AD%A6%E4%B9%A0/"/>
+  </entry>
+  
+  <entry>
+    <title>博客搭建教程</title>
+    <link href="http://ze520.cn/posts/2.html"/>
+    <id>http://ze520.cn/posts/2.html</id>
+    <published>2022-09-14T01:14:00.000Z</published>
+    <updated>2022-09-14T02:08:23.103Z</updated>
+    
+    <content type="html"><![CDATA[<p>准备工具:<br>node.js:<br>node -v</p><p>Git:<br>git –version</p><p>Hexo:<br>npm install hexo-cli -g<br>hexo -v</p><p>在github上建一个仓库,仓库名叫:注册名.github.io,也就是yswm-m.github.io<br>然后将下面的Add a README file选项给勾上</p><p>然后在任意一个盘新建文件夹,在文件夹里打开Git Bach Here,输入ssh查看密钥是否安装,然后输入:ssh-keygen -t rsa -C “<a href="mailto:3269661045@qq.com">3269661045@qq.com</a>“,然后按4次回车<br>这时在电脑的C盘下的用户文件夹里已经生成了一个.ssh文件夹,将里面的id_rsa.pub文件打开,复制里面的密钥,回到github,在个人中心里点击Setting,然后在侧边栏点击SSH and GPG keys,然后点击New SSH key按钮<br>将密钥复制进Key里,Title可以随便填,点击Add SSH Key保存,</p><p>回到Git Bach Here输入:ssh -T <a href="mailto:git@github.com">git@github.com</a> 再输入yes,检查密钥是否添加成功,然后退出Git</p><p>在任意一个盘新建文件夹用来存放博客文章,在文件夹里面重新打开Git Bach Here,输入hexo init初始化博客文件</p><p>输入hexo s运行本地服务<br>ctrl+c终止本地服务<br>打开文件夹里的_config.yml文件,修改里面的deploy字段为:<br>deploy:<br>    type: git<br>    repository: 项目在github上的地址<br>    branch: main</p><p>重新打开Git Bach Here输入:npm install hexo-deployer-git –save<br>然后输入:hexo g拉取资源生成页面<br>输入:hexo d上传文件到仓库,第一次输入需要密码,上传成功后访问<a href="https://yswm-m.github.io/">https://yswm-m.github.io/</a> 就可以查看博客了</p><p>如果hexo d上传不成功的解决办法:<br>首先第一步进入你的/Blog文件夹找到并删除.deploy_git文件夹;<br>然后在Git bash里依次输入:<br>git config –global core.autocrlf false<br>hexo clean<br>hexo g<br>hexo d<br>如果还不行的话，可能是账户认证出现了问题，需要你输入：<br>git config –global user.email “邮箱”<br>git config –global user.name “用户名”<br>最后再试试上传，看见INFO Deploy done： git就代表成功啦</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;准备工具:&lt;br&gt;node.js:&lt;br&gt;node -v&lt;/p&gt;
+&lt;p&gt;Git:&lt;br&gt;git –version&lt;/p&gt;
+&lt;p&gt;Hexo:&lt;br&gt;npm install hexo-cli -g&lt;br&gt;hexo -v&lt;/p&gt;
+&lt;p&gt;在github上建一个仓库,仓库名叫:注册名</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://ze520.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="教程" scheme="http://ze520.cn/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
