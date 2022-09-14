@@ -179,15 +179,15 @@ window.addEventListener('load',preloader.endLoading())</script><div class="js-pj
   function initValine () {
     const valine = new Valine(Object.assign({
       el: '#vcomment',
-      appId: 'OBentvFDdYCjDtgVNmfCFoR5-gzGzoHsz',
-      appKey: '4vs5nkvhufEA3U13zkg9v8HD',
+      appId: 'aByFNk8FuFt7QaxbOmfkzPuc-MdYXbMMI',
+      appKey: 'M6lgCW7tJQ4vAOm66WONnNzO',
       placeholder: '畅所欲言！',
       avatar: 'monsterid',
       meta: 'nick,mail,link'.split(','),
       pageSize: '10',
       lang: 'zh-CN',
       recordIP: false,
-      serverURLs: 'obentvfd.lc-cn-n1-shared.com',
+      serverURLs: 'abyfnk8f.api.lncldglobal.com',
       emojiCDN: '',
       emojiMaps: "",
       enableQQ: false,
@@ -198,7 +198,7 @@ window.addEventListener('load',preloader.endLoading())</script><div class="js-pj
   }
 
   if (typeof Valine === 'function') initValine() 
-  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+  else getScript('https://cdn.jsdelivr.net/gh/lete114/CDN/Valine/Valine-Lete3.2-min.js').then(initValine)
 }
 
 if ('Valine' === 'Valine' || !true) {
