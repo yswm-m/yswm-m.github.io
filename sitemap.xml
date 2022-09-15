@@ -221,13 +221,6 @@
   </url>
   
   <url>
-    <loc>http://ze520.cn/tags/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-09-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ze520.cn/tags/%E4%BA%BA%E7%94%9F/</loc>
     <lastmod>2022-09-15</lastmod>
     <changefreq>daily</changefreq>
@@ -235,7 +228,7 @@
   </url>
   
   <url>
-    <loc>http://ze520.cn/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://ze520.cn/tags/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2022-09-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -243,6 +236,13 @@
   
   <url>
     <loc>http://ze520.cn/tags/linux/</loc>
+    <lastmod>2022-09-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ze520.cn/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-09-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
