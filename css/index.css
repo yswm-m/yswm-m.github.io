@@ -1525,14 +1525,14 @@ img:not([src]) {
   text-decoration: none !important;
 }
 :root {
-  --hl-color: #8f93a2;
-  --hl-bg: #0f111a;
-  --hltools-bg: #0b0d14;
-  --hltools-color: #8f93a2;
-  --hlnumber-bg: #0f111a;
-  --hlnumber-color: rgba(143,147,162,0.5);
-  --hlscrollbar-bg: #06060a;
-  --hlexpand-bg: linear-gradient(180deg, rgba(15,17,26,0.6), rgba(15,17,26,0.9));
+  --hl-color: #90a4ae;
+  --hl-bg: #f6f8fa;
+  --hltools-bg: #e6ebf1;
+  --hltools-color: #90a4ae;
+  --hlnumber-bg: #f6f8fa;
+  --hlnumber-color: rgba(144,164,174,0.5);
+  --hlscrollbar-bg: #dce4eb;
+  --hlexpand-bg: linear-gradient(180deg, rgba(246,248,250,0.6), rgba(246,248,250,0.9));
 }
 #article-container pre[class*='language-'].line-numbers {
   position: relative;
@@ -1569,80 +1569,6 @@ img:not([src]) {
   color: var(--hlnumber-color);
   content: counter(linenumber);
   text-align: right;
-}
-pre[class*='language-'].language-css > code,
-pre[class*='language-'].language-sass > code,
-pre[class*='language-'].language-scss > code {
-  color: #fd9170 !important;
-}
-pre[class*='language-'] .namespace {
-  opacity: 0.7;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-  filter: alpha(opacity=70);
-}
-pre[class*='language-'] .token.atrule,
-pre[class*='language-'] .token.symbol,
-pre[class*='language-'] .token.constant,
-pre[class*='language-'] .token.boolean,
-pre[class*='language-'] .token.function {
-  color: #c792ea;
-}
-pre[class*='language-'] .token.attr-name,
-pre[class*='language-'] .token.builtin,
-pre[class*='language-'] .token.class {
-  color: #ffcb6b;
-}
-pre[class*='language-'] .token.attr-value,
-pre[class*='language-'] .token.attribute,
-pre[class*='language-'] .token.pseudo-class,
-pre[class*='language-'] .token.pseudo-element,
-pre[class*='language-'] .token.string {
-  color: #c3e88d;
-}
-pre[class*='language-'] .token.cdata,
-pre[class*='language-'] .token.property,
-pre[class*='language-'] .token.char,
-pre[class*='language-'] .token.inserted {
-  color: #80cbc4;
-}
-pre[class*='language-'] .token.class-name,
-pre[class*='language-'] .token.color,
-pre[class*='language-'] .token.hexcode,
-pre[class*='language-'] .token.regex {
-  color: #f2ff00;
-}
-pre[class*='language-'] .token.comment,
-pre[class*='language-'] .token.prolog,
-pre[class*='language-'] .token.doctype {
-  color: #546e7a;
-}
-pre[class*='language-'] .token.deleted,
-pre[class*='language-'] .token.variable,
-pre[class*='language-'] .token.entity,
-pre[class*='language-'] .token.selector,
-pre[class*='language-'] .token.tag,
-pre[class*='language-'] .token.unit {
-  color: #f07178;
-}
-pre[class*='language-'] .token.id {
-  color: #c792ea;
-  font-weight: bold;
-}
-pre[class*='language-'] .token.important {
-  color: #c792ea;
-  font-weight: bold;
-}
-pre[class*='language-'] .token.keyword {
-  color: #c792ea;
-  font-style: italic;
-}
-pre[class*='language-'] .token.number,
-pre[class*='language-'] .token.url {
-  color: #fd9170;
-}
-pre[class*='language-'] .token.operator,
-pre[class*='language-'] .token.punctuation {
-  color: #89ddff;
 }
 #article-container pre[class*='language-']::-webkit-scrollbar-thumb {
   background: var(--hlscrollbar-bg);
