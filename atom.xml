@@ -441,6 +441,32 @@ echo $SHELL 查看当前环境下的bash
   </entry>
   
   <entry>
+    <title>博客搭建教程</title>
+    <link href="https://yswm-m.github.io/posts/2.html"/>
+    <id>https://yswm-m.github.io/posts/2.html</id>
+    <published>2022-09-14T01:14:00.000Z</published>
+    <updated>2022-09-16T06:52:23.656Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章内容:</p><pre class="language-cpp" data-language="cpp"><code class="language-cpp">准备工具<span class="token operator">:</span>node<span class="token punctuation">.</span>js<span class="token operator">:</span>node <span class="token operator">-</span>vGit<span class="token operator">:</span>git <span class="token operator">--</span>versionHexo<span class="token operator">:</span>npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>ghexo <span class="token operator">-</span>v在github上建一个仓库<span class="token punctuation">,</span>仓库名叫<span class="token operator">:</span>注册名<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">,</span>也就是yswm<span class="token operator">-</span>m<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io然后将下面的Add a README file选项给勾上然后在任意一个盘新建文件夹<span class="token punctuation">,</span>在文件夹里打开Git Bach Here<span class="token punctuation">,</span>输入ssh查看密钥是否安装<span class="token punctuation">,</span>然后输入<span class="token operator">:</span>ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span>C <span class="token string">"3269661045@qq.com"</span><span class="token punctuation">,</span>然后按<span class="token number">4</span>次回车这时在电脑的C盘下的用户文件夹里已经生成了一个<span class="token punctuation">.</span>ssh文件夹<span class="token punctuation">,</span>将里面的id_rsa<span class="token punctuation">.</span>pub文件打开<span class="token punctuation">,</span>复制里面的密钥<span class="token punctuation">,</span>回到github<span class="token punctuation">,</span>在个人中心里点击Setting<span class="token punctuation">,</span>然后在侧边栏点击SSH <span class="token operator">and</span> GPG keys<span class="token punctuation">,</span>然后点击New SSH key按钮将密钥复制进Key里<span class="token punctuation">,</span>Title可以随便填<span class="token punctuation">,</span>点击Add SSH Key保存<span class="token punctuation">,</span>回到Git Bach Here输入<span class="token operator">:</span>ssh <span class="token operator">-</span>T git@github<span class="token punctuation">.</span>com 再输入yes<span class="token punctuation">,</span>检查密钥是否添加成功<span class="token punctuation">,</span>然后退出Git在任意一个盘新建文件夹用来存放博客文章<span class="token punctuation">,</span>在文件夹里面重新打开Git Bach Here<span class="token punctuation">,</span>输入hexo init初始化博客文件输入hexo s运行本地服务ctrl<span class="token operator">+</span>c终止本地服务打开文件夹里的_config<span class="token punctuation">.</span>yml文件<span class="token punctuation">,</span>修改里面的deploy字段为<span class="token operator">:</span>deploy<span class="token operator">:</span>    type<span class="token operator">:</span> git    repository<span class="token operator">:</span> 项目在github上的地址    branch<span class="token operator">:</span> main重新打开Git Bach Here输入<span class="token operator">:</span>npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save然后输入<span class="token operator">:</span>hexo g拉取资源生成页面输入<span class="token operator">:</span>hexo d上传文件到仓库<span class="token punctuation">,</span>第一次输入需要密码<span class="token punctuation">,</span>上传成功后访问https<span class="token operator">:</span><span class="token comment">//yswm-m.github.io/ 就可以查看博客了</span>如果hexo d上传不成功的解决办法<span class="token operator">:</span>首先第一步进入你的<span class="token operator">/</span>Blog文件夹找到并删除<span class="token punctuation">.</span>deploy_git文件夹<span class="token punctuation">;</span>然后在Git bash里依次输入<span class="token operator">:</span>git config <span class="token operator">--</span>global core<span class="token punctuation">.</span>autocrlf <span class="token boolean">false</span>hexo cleanhexo ghexo d如果还不行的话，可能是账户认证出现了问题，需要你输入：git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"邮箱"</span>git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"用户名"</span>最后再试试上传，看见INFO Deploy done： git就代表成功啦</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;文章内容:&lt;/p&gt;
+&lt;pre class=&quot;language-cpp&quot; data-language=&quot;cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;准备工具&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;
+node&lt;span cl</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="https://yswm-m.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="教程" scheme="https://yswm-m.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>数据结构与算法</title>
     <link href="https://yswm-m.github.io/posts/3.html"/>
     <id>https://yswm-m.github.io/posts/3.html</id>
@@ -469,35 +495,9 @@ echo $SHELL 查看当前环境下的bash
     <category term="编程" scheme="https://yswm-m.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
+    <category term="教程" scheme="https://yswm-m.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
     <category term="学习" scheme="https://yswm-m.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="教程" scheme="https://yswm-m.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客搭建教程</title>
-    <link href="https://yswm-m.github.io/posts/2.html"/>
-    <id>https://yswm-m.github.io/posts/2.html</id>
-    <published>2022-09-14T01:14:00.000Z</published>
-    <updated>2022-09-16T06:52:23.656Z</updated>
-    
-    <content type="html"><![CDATA[<p>文章内容:</p><pre class="language-cpp" data-language="cpp"><code class="language-cpp">准备工具<span class="token operator">:</span>node<span class="token punctuation">.</span>js<span class="token operator">:</span>node <span class="token operator">-</span>vGit<span class="token operator">:</span>git <span class="token operator">--</span>versionHexo<span class="token operator">:</span>npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>ghexo <span class="token operator">-</span>v在github上建一个仓库<span class="token punctuation">,</span>仓库名叫<span class="token operator">:</span>注册名<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">,</span>也就是yswm<span class="token operator">-</span>m<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io然后将下面的Add a README file选项给勾上然后在任意一个盘新建文件夹<span class="token punctuation">,</span>在文件夹里打开Git Bach Here<span class="token punctuation">,</span>输入ssh查看密钥是否安装<span class="token punctuation">,</span>然后输入<span class="token operator">:</span>ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span>C <span class="token string">"3269661045@qq.com"</span><span class="token punctuation">,</span>然后按<span class="token number">4</span>次回车这时在电脑的C盘下的用户文件夹里已经生成了一个<span class="token punctuation">.</span>ssh文件夹<span class="token punctuation">,</span>将里面的id_rsa<span class="token punctuation">.</span>pub文件打开<span class="token punctuation">,</span>复制里面的密钥<span class="token punctuation">,</span>回到github<span class="token punctuation">,</span>在个人中心里点击Setting<span class="token punctuation">,</span>然后在侧边栏点击SSH <span class="token operator">and</span> GPG keys<span class="token punctuation">,</span>然后点击New SSH key按钮将密钥复制进Key里<span class="token punctuation">,</span>Title可以随便填<span class="token punctuation">,</span>点击Add SSH Key保存<span class="token punctuation">,</span>回到Git Bach Here输入<span class="token operator">:</span>ssh <span class="token operator">-</span>T git@github<span class="token punctuation">.</span>com 再输入yes<span class="token punctuation">,</span>检查密钥是否添加成功<span class="token punctuation">,</span>然后退出Git在任意一个盘新建文件夹用来存放博客文章<span class="token punctuation">,</span>在文件夹里面重新打开Git Bach Here<span class="token punctuation">,</span>输入hexo init初始化博客文件输入hexo s运行本地服务ctrl<span class="token operator">+</span>c终止本地服务打开文件夹里的_config<span class="token punctuation">.</span>yml文件<span class="token punctuation">,</span>修改里面的deploy字段为<span class="token operator">:</span>deploy<span class="token operator">:</span>    type<span class="token operator">:</span> git    repository<span class="token operator">:</span> 项目在github上的地址    branch<span class="token operator">:</span> main重新打开Git Bach Here输入<span class="token operator">:</span>npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save然后输入<span class="token operator">:</span>hexo g拉取资源生成页面输入<span class="token operator">:</span>hexo d上传文件到仓库<span class="token punctuation">,</span>第一次输入需要密码<span class="token punctuation">,</span>上传成功后访问https<span class="token operator">:</span><span class="token comment">//yswm-m.github.io/ 就可以查看博客了</span>如果hexo d上传不成功的解决办法<span class="token operator">:</span>首先第一步进入你的<span class="token operator">/</span>Blog文件夹找到并删除<span class="token punctuation">.</span>deploy_git文件夹<span class="token punctuation">;</span>然后在Git bash里依次输入<span class="token operator">:</span>git config <span class="token operator">--</span>global core<span class="token punctuation">.</span>autocrlf <span class="token boolean">false</span>hexo cleanhexo ghexo d如果还不行的话，可能是账户认证出现了问题，需要你输入：git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"邮箱"</span>git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"用户名"</span>最后再试试上传，看见INFO Deploy done： git就代表成功啦</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;文章内容:&lt;/p&gt;
-&lt;pre class=&quot;language-cpp&quot; data-language=&quot;cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;准备工具&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;
-node&lt;span cl</summary>
-      
-    
-    
-    
-    <category term="学习" scheme="https://yswm-m.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="教程" scheme="https://yswm-m.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
