@@ -8,7 +8,7 @@
       <link href="/posts/17.html"/>
       <url>/posts/17.html</url>
       
-        <content type="html"><![CDATA[<h4 id="原题链接-AcWing"><a href="#原题链接-AcWing" class="headerlink" title="原题链接: AcWing"></a>原题链接: <a href="https://www.acwing.com/problem/content/4616/">AcWing</a></h4><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h3><h4>小朋友们在玩跳方格游戏。<p>n 个方格排成一排，从左到右依次编号为 1∼n。</p><p>每个方格中都标有一个方向箭头，箭头分为两种：”&gt;” 和 “&lt;”。</p><p>“&gt;” 表示进入方格的小朋友需要向右跳动一格距离，&lt; 表示进入方格的小朋友需要向左跳动一格距离。</p><p>初始时，小朋友需要选择任意一个方格作为自己的初始位置，并从初始位置开始，按照每个方格的指示跳跃方向进行连续跳跃。</p><p>如果小朋友可以跳到界外，则视为赢得游戏胜利。</p><p>请你计算，为了赢得游戏胜利，共有多少个方格可以作为初始位置。</p><p>例如，当 n=4 且每个方格中的箭头方向依次为 &lt;&lt;&gt;&lt; 时，选择第 1 个或第 2 个方格作为初始位置，均可以跳到（左侧）界外，而选择第 3 个或第 4 个方格作为初始位置，则会陷入无限反复横跳，无法跳出界外，所以共有 2 个方格可以作为初始位置。</p></h4><h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><h4>第一行包含整数 n。<p>第二行包含一个长度为 n 的由 &lt; 和 &gt; 构成的字符串，其中第 i 个字符表示第 i 个方格中的方向箭头。</p></h4><h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><h4>一个整数，表示可以作为初始位置的方格数量。</h4><h3 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h3><h4>前 3 个测试点满足 1≤n≤10。所有测试点满足 1≤n≤2×10^5。</h4><h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><pre class="language-c++" data-language="c++"><code class="language-c++">4&lt;&lt;&gt;&lt;</code></pre><h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><pre class="language-c++" data-language="c++"><code class="language-c++">2</code></pre><h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><pre class="language-c++" data-language="c++"><code class="language-c++">5&gt;&gt;&gt;&gt;&gt;</code></pre><h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><pre class="language-c++" data-language="c++"><code class="language-c++">5</code></pre><h3 id="输入样例3："><a href="#输入样例3：" class="headerlink" title="输入样例3："></a>输入样例3：</h3><pre class="language-c++" data-language="c++"><code class="language-c++">4&gt;&gt;&lt;&lt;</code></pre><h3 id="输出样例3："><a href="#输出样例3：" class="headerlink" title="输出样例3："></a>输出样例3：</h3><pre class="language-c++" data-language="c++"><code class="language-c++">0</code></pre><h3 id="解体思路"><a href="#解体思路" class="headerlink" title="解体思路:"></a>解体思路:</h3><h4>这道题实际上是一个思维题，一开始我还以为是什么大模拟之类的，后面发现其实就是从左边出的必须一直向左，右边出同理必须一直向右，否则就会陷入死循环，那么就只需要把从左边出的和从右边出的加起来就好了。</h4><h4 id="代码"><a href="#代码" class="headerlink" title="代码:"></a>代码:</h4><pre class="language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;#include &lt;cstring&gt;using namespace std;int main(){    int n;    cin&gt;&gt;n;    string s;    cin&gt;&gt;s;    int ans = 0;    for(int i=0;i&lt;n&amp;&amp;s[i]=='&lt;';++i)    {        ans++;    }    for(int i = n-1;i&gt;=0&amp;&amp;s[i]=='&gt;';--i)    {        ans++;    }    cout&lt;&lt;ans&lt;&lt;endl;    return 0;}</code></pre>]]></content>
+        <content type="html"><![CDATA[<h4 id="原题链接-AcWing"><a href="#原题链接-AcWing" class="headerlink" title="原题链接: AcWing"></a>原题链接: <a href="https://www.acwing.com/problem/content/4616/">AcWing</a></h4><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h3><h4>小朋友们在玩跳方格游戏。<p>n 个方格排成一排，从左到右依次编号为 1∼n。</p><p>每个方格中都标有一个方向箭头，箭头分为两种：”&gt;” 和 “&lt;”。</p><p>“&gt;” 表示进入方格的小朋友需要向右跳动一格距离，”&lt;” 表示进入方格的小朋友需要向左跳动一格距离。</p><p>初始时，小朋友需要选择任意一个方格作为自己的初始位置，并从初始位置开始，按照每个方格的指示跳跃方向进行连续跳跃。</p><p>如果小朋友可以跳到界外，则视为赢得游戏胜利。</p><p>请你计算，为了赢得游戏胜利，共有多少个方格可以作为初始位置。</p><p>例如，当 n=4 且每个方格中的箭头方向依次为 &lt;&lt;&gt;&lt; 时，选择第 1 个或第 2 个方格作为初始位置，均可以跳到（左侧）界外，而选择第 3 个或第 4 个方格作为初始位置，则会陷入无限反复横跳，无法跳出界外，所以共有 2 个方格可以作为初始位置。</p></h4><h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><h4>第一行包含整数 n。<p>第二行包含一个长度为 n 的由 &lt; 和 &gt; 构成的字符串，其中第 i 个字符表示第 i 个方格中的方向箭头。</p></h4><h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><h4>一个整数，表示可以作为初始位置的方格数量。</h4><h3 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h3><h4>前 3 个测试点满足 1≤n≤10。所有测试点满足 1≤n≤2×10^5。</h4><h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><pre class="language-c++" data-language="c++"><code class="language-c++">4&lt;&lt;&gt;&lt;</code></pre><h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><pre class="language-c++" data-language="c++"><code class="language-c++">2</code></pre><h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><pre class="language-c++" data-language="c++"><code class="language-c++">5&gt;&gt;&gt;&gt;&gt;</code></pre><h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><pre class="language-c++" data-language="c++"><code class="language-c++">5</code></pre><h3 id="输入样例3："><a href="#输入样例3：" class="headerlink" title="输入样例3："></a>输入样例3：</h3><pre class="language-c++" data-language="c++"><code class="language-c++">4&gt;&gt;&lt;&lt;</code></pre><h3 id="输出样例3："><a href="#输出样例3：" class="headerlink" title="输出样例3："></a>输出样例3：</h3><pre class="language-c++" data-language="c++"><code class="language-c++">0</code></pre><h3 id="解体思路"><a href="#解体思路" class="headerlink" title="解体思路:"></a>解体思路:</h3><h4>这道题实际上是一个思维题，一开始我还以为是什么大模拟之类的，后面发现其实就是从左边出的必须一直向左，右边出同理必须一直向右，否则就会陷入死循环，那么就只需要把从左边出的和从右边出的加起来就好了。</h4><h4 id="代码"><a href="#代码" class="headerlink" title="代码:"></a>代码:</h4><pre class="language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;#include &lt;cstring&gt;using namespace std;int main(){    int n;    cin&gt;&gt;n;    string s;    cin&gt;&gt;s;    int ans = 0;    for(int i=0;i&lt;n&amp;&amp;s[i]=='&lt;';++i)    {        ans++;    }    for(int i = n-1;i&gt;=0&amp;&amp;s[i]=='&gt;';--i)    {        ans++;    }    cout&lt;&lt;ans&lt;&lt;endl;    return 0;}</code></pre>]]></content>
       
       
       <categories>
@@ -326,33 +326,6 @@
     
     
     <entry>
-      <title>人生感悟</title>
-      <link href="/posts/4.html"/>
-      <url>/posts/4.html</url>
-      
-        <content type="html"><![CDATA[<p>文章内容:</p><h4>混一天和努力一天，一天看不出任何差别，三天看不到任何变化，七天也看不到任何距离……</h4><h4>但是一个月后会看到话题不同，三个月后会看到气场不同，半年后会看到距离不同，一年后会看到人生道路截然不同。请坚信你所喜爱的事物！</h4><h4>世界上有10种人，一种是懂二进制的，另一种是不懂二进制的~</h4><h4>自卑和傲慢是一回事，你潜意识里瞧不起无能的人，才会觉得别人也可能瞧不起无能的你。</h4><h4>走过弯路，回头才有可能看清直路。人的一生，痛苦和骄傲都应拥有</h4><h4>有很多事，不是你放不下，就一定要勉强举着，这样只会一点点消磨你对它的热爱。——《棋魂》</h4><h4>我深怕自己本非美玉，故而不敢加以刻苦琢磨，却又半信自己是块美玉，故又不肯庸庸碌碌，与瓦砾为伍。于是我渐渐地脱离凡尘，疏远世人，结果便是一任愤懑与羞恨日益助长内心那怯弱的自尊心。</h4><h4>对未来的真正慷慨，是把一切献给现在。——加缪</h4><h4>说花美就会有人说“也有不美的花”。 预想到会有这种抱怨于是写“既有美丽的花也有不美的花”。这已经是废话了。 让所有人都认同的文字称不上表达。表达需要勇气。——铃木光司</h4><h1 id="这是一生雾梦的个人博客"><a href="#这是一生雾梦的个人博客" class="headerlink" title="这是一生雾梦的个人博客"></a>这是一生雾梦的个人博客</h1><h2 id="以后会更新很多的内容"><a href="#以后会更新很多的内容" class="headerlink" title="以后会更新很多的内容"></a>以后会更新很多的内容</h2><h2 id="欢迎你收藏本网址"><a href="#欢迎你收藏本网址" class="headerlink" title="欢迎你收藏本网址"></a>欢迎你收藏本网址</h2><h2 id="有问题请跳转到：百度"><a href="#有问题请跳转到：百度" class="headerlink" title="有问题请跳转到：百度"></a>有问题请跳转到：<a href="https://www.baidu.com/">百度</a></h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 生活 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 想法 </tag>
-            
-            <tag> 人生 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>C++自学笔记</title>
       <link href="/posts/5.html"/>
       <url>/posts/5.html</url>
@@ -372,6 +345,33 @@
             <tag> 教程 </tag>
             
             <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>人生感悟</title>
+      <link href="/posts/4.html"/>
+      <url>/posts/4.html</url>
+      
+        <content type="html"><![CDATA[<p>文章内容:</p><h4>混一天和努力一天，一天看不出任何差别，三天看不到任何变化，七天也看不到任何距离……</h4><h4>但是一个月后会看到话题不同，三个月后会看到气场不同，半年后会看到距离不同，一年后会看到人生道路截然不同。请坚信你所喜爱的事物！</h4><h4>世界上有10种人，一种是懂二进制的，另一种是不懂二进制的~</h4><h4>自卑和傲慢是一回事，你潜意识里瞧不起无能的人，才会觉得别人也可能瞧不起无能的你。</h4><h4>走过弯路，回头才有可能看清直路。人的一生，痛苦和骄傲都应拥有</h4><h4>有很多事，不是你放不下，就一定要勉强举着，这样只会一点点消磨你对它的热爱。——《棋魂》</h4><h4>我深怕自己本非美玉，故而不敢加以刻苦琢磨，却又半信自己是块美玉，故又不肯庸庸碌碌，与瓦砾为伍。于是我渐渐地脱离凡尘，疏远世人，结果便是一任愤懑与羞恨日益助长内心那怯弱的自尊心。</h4><h4>对未来的真正慷慨，是把一切献给现在。——加缪</h4><h4>说花美就会有人说“也有不美的花”。 预想到会有这种抱怨于是写“既有美丽的花也有不美的花”。这已经是废话了。 让所有人都认同的文字称不上表达。表达需要勇气。——铃木光司</h4><h1 id="这是一生雾梦的个人博客"><a href="#这是一生雾梦的个人博客" class="headerlink" title="这是一生雾梦的个人博客"></a>这是一生雾梦的个人博客</h1><h2 id="以后会更新很多的内容"><a href="#以后会更新很多的内容" class="headerlink" title="以后会更新很多的内容"></a>以后会更新很多的内容</h2><h2 id="欢迎你收藏本网址"><a href="#欢迎你收藏本网址" class="headerlink" title="欢迎你收藏本网址"></a>欢迎你收藏本网址</h2><h2 id="有问题请跳转到：百度"><a href="#有问题请跳转到：百度" class="headerlink" title="有问题请跳转到：百度"></a>有问题请跳转到：<a href="https://www.baidu.com/">百度</a></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 想法 </tag>
+            
+            <tag> 人生 </tag>
             
         </tags>
       
