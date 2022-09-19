@@ -380,33 +380,6 @@
     
     
     <entry>
-      <title>人生感悟</title>
-      <link href="/posts/4.html"/>
-      <url>/posts/4.html</url>
-      
-        <content type="html"><![CDATA[<p>文章内容:</p><h3>混一天和努力一天，一天看不出任何差别，三天看不到任何变化，七天也看不到任何距离……</h3><h3>但是一个月后会看到话题不同，三个月后会看到气场不同，半年后会看到距离不同，一年后会看到人生道路截然不同。请坚信你所喜爱的事物！</h3><h3>世界上有10种人，一种是懂二进制的，另一种是不懂二进制的~</h3><h3>自卑和傲慢是一回事，你潜意识里瞧不起无能的人，才会觉得别人也可能瞧不起无能的你。</h3><h3>走过弯路，回头才有可能看清直路。人的一生，痛苦和骄傲都应拥有</h3><h3>有很多事，不是你放不下，就一定要勉强举着，这样只会一点点消磨你对它的热爱。——《棋魂》</h3><h3>我深怕自己本非美玉，故而不敢加以刻苦琢磨，却又半信自己是块美玉，故又不肯庸庸碌碌，与瓦砾为伍。于是我渐渐地脱离凡尘，疏远世人，结果便是一任愤懑与羞恨日益助长内心那怯弱的自尊心。</h3><h3>对未来的真正慷慨，是把一切献给现在。——加缪</h3><h3>说花美就会有人说“也有不美的花”。 预想到会有这种抱怨于是写“既有美丽的花也有不美的花”。这已经是废话了。 让所有人都认同的文字称不上表达。表达需要勇气。——铃木光司</h3><h3>真正的力量，永远不会属于天生就强壮过人，敏捷过人，聪明过人的家伙，绝不，它只会属于...愿意不惜一切达成目地的人。——希尔科</h3><h2 id="这是一生雾梦的个人博客"><a href="#这是一生雾梦的个人博客" class="headerlink" title="这是一生雾梦的个人博客"></a>这是一生雾梦的个人博客</h2><h2 id="以后会更新很多的内容"><a href="#以后会更新很多的内容" class="headerlink" title="以后会更新很多的内容"></a>以后会更新很多的内容</h2><h2 id="欢迎你收藏本网址"><a href="#欢迎你收藏本网址" class="headerlink" title="欢迎你收藏本网址"></a>欢迎你收藏本网址</h2><h2 id="有问题请跳转到：百度"><a href="#有问题请跳转到：百度" class="headerlink" title="有问题请跳转到：百度"></a>有问题请跳转到：<a href="https://www.baidu.com/">百度</a></h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 生活 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 想法 </tag>
-            
-            <tag> 人生 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>C++自学笔记</title>
       <link href="/posts/5.html"/>
       <url>/posts/5.html</url>
@@ -434,23 +407,25 @@
     
     
     <entry>
-      <title>博客搭建教程</title>
-      <link href="/posts/2.html"/>
-      <url>/posts/2.html</url>
+      <title>人生感悟</title>
+      <link href="/posts/4.html"/>
+      <url>/posts/4.html</url>
       
-        <content type="html"><![CDATA[<p>文章内容:</p><pre class="language-cpp" data-language="cpp"><code class="language-cpp">准备工具<span class="token operator">:</span>node<span class="token punctuation">.</span>js<span class="token operator">:</span>node <span class="token operator">-</span>vGit<span class="token operator">:</span>git <span class="token operator">--</span>versionHexo<span class="token operator">:</span>npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>ghexo <span class="token operator">-</span>v在github上建一个仓库<span class="token punctuation">,</span>仓库名叫<span class="token operator">:</span>注册名<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">,</span>也就是yswm<span class="token operator">-</span>m<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io然后将下面的Add a README file选项给勾上然后在任意一个盘新建文件夹<span class="token punctuation">,</span>在文件夹里打开Git Bach Here<span class="token punctuation">,</span>输入ssh查看密钥是否安装<span class="token punctuation">,</span>然后输入<span class="token operator">:</span>ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span>C <span class="token string">"3269661045@qq.com"</span><span class="token punctuation">,</span>然后按<span class="token number">4</span>次回车这时在电脑的C盘下的用户文件夹里已经生成了一个<span class="token punctuation">.</span>ssh文件夹<span class="token punctuation">,</span>将里面的id_rsa<span class="token punctuation">.</span>pub文件打开<span class="token punctuation">,</span>复制里面的密钥<span class="token punctuation">,</span>回到github<span class="token punctuation">,</span>在个人中心里点击Setting<span class="token punctuation">,</span>然后在侧边栏点击SSH <span class="token operator">and</span> GPG keys<span class="token punctuation">,</span>然后点击New SSH key按钮将密钥复制进Key里<span class="token punctuation">,</span>Title可以随便填<span class="token punctuation">,</span>点击Add SSH Key保存<span class="token punctuation">,</span>回到Git Bach Here输入<span class="token operator">:</span>ssh <span class="token operator">-</span>T git@github<span class="token punctuation">.</span>com 再输入yes<span class="token punctuation">,</span>检查密钥是否添加成功<span class="token punctuation">,</span>然后退出Git在任意一个盘新建文件夹用来存放博客文章<span class="token punctuation">,</span>在文件夹里面重新打开Git Bach Here<span class="token punctuation">,</span>输入hexo init初始化博客文件输入hexo s运行本地服务ctrl<span class="token operator">+</span>c终止本地服务打开文件夹里的_config<span class="token punctuation">.</span>yml文件<span class="token punctuation">,</span>修改里面的deploy字段为<span class="token operator">:</span>deploy<span class="token operator">:</span>    type<span class="token operator">:</span> git    repository<span class="token operator">:</span> 项目在github上的地址    branch<span class="token operator">:</span> main重新打开Git Bach Here输入<span class="token operator">:</span>npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save然后输入<span class="token operator">:</span>hexo g拉取资源生成页面输入<span class="token operator">:</span>hexo d上传文件到仓库<span class="token punctuation">,</span>第一次输入需要密码<span class="token punctuation">,</span>上传成功后访问https<span class="token operator">:</span><span class="token comment">//yswm-m.github.io/ 就可以查看博客了</span>如果hexo d上传不成功的解决办法<span class="token operator">:</span>首先第一步进入你的<span class="token operator">/</span>Blog文件夹找到并删除<span class="token punctuation">.</span>deploy_git文件夹<span class="token punctuation">;</span>然后在Git bash里依次输入<span class="token operator">:</span>git config <span class="token operator">--</span>global core<span class="token punctuation">.</span>autocrlf <span class="token boolean">false</span>hexo cleanhexo ghexo d如果还不行的话，可能是账户认证出现了问题，需要你输入：git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"邮箱"</span>git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"用户名"</span>最后再试试上传，看见INFO Deploy done： git就代表成功啦</code></pre>]]></content>
+        <content type="html"><![CDATA[<p>文章内容:</p><h3>混一天和努力一天，一天看不出任何差别，三天看不到任何变化，七天也看不到任何距离……</h3><h3>但是一个月后会看到话题不同，三个月后会看到气场不同，半年后会看到距离不同，一年后会看到人生道路截然不同。请坚信你所喜爱的事物！</h3><h3>世界上有10种人，一种是懂二进制的，另一种是不懂二进制的~</h3><h3>自卑和傲慢是一回事，你潜意识里瞧不起无能的人，才会觉得别人也可能瞧不起无能的你。</h3><h3>走过弯路，回头才有可能看清直路。人的一生，痛苦和骄傲都应拥有</h3><h3>有很多事，不是你放不下，就一定要勉强举着，这样只会一点点消磨你对它的热爱。——《棋魂》</h3><h3>我深怕自己本非美玉，故而不敢加以刻苦琢磨，却又半信自己是块美玉，故又不肯庸庸碌碌，与瓦砾为伍。于是我渐渐地脱离凡尘，疏远世人，结果便是一任愤懑与羞恨日益助长内心那怯弱的自尊心。</h3><h3>对未来的真正慷慨，是把一切献给现在。——加缪</h3><h3>说花美就会有人说“也有不美的花”。 预想到会有这种抱怨于是写“既有美丽的花也有不美的花”。这已经是废话了。 让所有人都认同的文字称不上表达。表达需要勇气。——铃木光司</h3><h3>真正的力量，永远不会属于天生就强壮过人，敏捷过人，聪明过人的家伙，绝不，它只会属于...愿意不惜一切达成目地的人。——希尔科</h3><h2 id="这是一生雾梦的个人博客"><a href="#这是一生雾梦的个人博客" class="headerlink" title="这是一生雾梦的个人博客"></a>这是一生雾梦的个人博客</h2><h2 id="以后会更新很多的内容"><a href="#以后会更新很多的内容" class="headerlink" title="以后会更新很多的内容"></a>以后会更新很多的内容</h2><h2 id="欢迎你收藏本网址"><a href="#欢迎你收藏本网址" class="headerlink" title="欢迎你收藏本网址"></a>欢迎你收藏本网址</h2><h2 id="有问题请跳转到：百度"><a href="#有问题请跳转到：百度" class="headerlink" title="有问题请跳转到：百度"></a>有问题请跳转到：<a href="https://www.baidu.com/">百度</a></h2>]]></content>
       
       
       <categories>
           
-          <category> 学习 </category>
+          <category> 生活 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 教程 </tag>
+            <tag> 想法 </tag>
+            
+            <tag> 人生 </tag>
             
         </tags>
       
@@ -478,6 +453,31 @@
             <tag> 教程 </tag>
             
             <tag> 学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博客搭建教程</title>
+      <link href="/posts/2.html"/>
+      <url>/posts/2.html</url>
+      
+        <content type="html"><![CDATA[<p>文章内容:</p><pre class="language-cpp" data-language="cpp"><code class="language-cpp">准备工具<span class="token operator">:</span>node<span class="token punctuation">.</span>js<span class="token operator">:</span>node <span class="token operator">-</span>vGit<span class="token operator">:</span>git <span class="token operator">--</span>versionHexo<span class="token operator">:</span>npm install hexo<span class="token operator">-</span>cli <span class="token operator">-</span>ghexo <span class="token operator">-</span>v在github上建一个仓库<span class="token punctuation">,</span>仓库名叫<span class="token operator">:</span>注册名<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token punctuation">,</span>也就是yswm<span class="token operator">-</span>m<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io然后将下面的Add a README file选项给勾上然后在任意一个盘新建文件夹<span class="token punctuation">,</span>在文件夹里打开Git Bach Here<span class="token punctuation">,</span>输入ssh查看密钥是否安装<span class="token punctuation">,</span>然后输入<span class="token operator">:</span>ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span>C <span class="token string">"3269661045@qq.com"</span><span class="token punctuation">,</span>然后按<span class="token number">4</span>次回车这时在电脑的C盘下的用户文件夹里已经生成了一个<span class="token punctuation">.</span>ssh文件夹<span class="token punctuation">,</span>将里面的id_rsa<span class="token punctuation">.</span>pub文件打开<span class="token punctuation">,</span>复制里面的密钥<span class="token punctuation">,</span>回到github<span class="token punctuation">,</span>在个人中心里点击Setting<span class="token punctuation">,</span>然后在侧边栏点击SSH <span class="token operator">and</span> GPG keys<span class="token punctuation">,</span>然后点击New SSH key按钮将密钥复制进Key里<span class="token punctuation">,</span>Title可以随便填<span class="token punctuation">,</span>点击Add SSH Key保存<span class="token punctuation">,</span>回到Git Bach Here输入<span class="token operator">:</span>ssh <span class="token operator">-</span>T git@github<span class="token punctuation">.</span>com 再输入yes<span class="token punctuation">,</span>检查密钥是否添加成功<span class="token punctuation">,</span>然后退出Git在任意一个盘新建文件夹用来存放博客文章<span class="token punctuation">,</span>在文件夹里面重新打开Git Bach Here<span class="token punctuation">,</span>输入hexo init初始化博客文件输入hexo s运行本地服务ctrl<span class="token operator">+</span>c终止本地服务打开文件夹里的_config<span class="token punctuation">.</span>yml文件<span class="token punctuation">,</span>修改里面的deploy字段为<span class="token operator">:</span>deploy<span class="token operator">:</span>    type<span class="token operator">:</span> git    repository<span class="token operator">:</span> 项目在github上的地址    branch<span class="token operator">:</span> main重新打开Git Bach Here输入<span class="token operator">:</span>npm install hexo<span class="token operator">-</span>deployer<span class="token operator">-</span>git <span class="token operator">--</span>save然后输入<span class="token operator">:</span>hexo g拉取资源生成页面输入<span class="token operator">:</span>hexo d上传文件到仓库<span class="token punctuation">,</span>第一次输入需要密码<span class="token punctuation">,</span>上传成功后访问https<span class="token operator">:</span><span class="token comment">//yswm-m.github.io/ 就可以查看博客了</span>如果hexo d上传不成功的解决办法<span class="token operator">:</span>首先第一步进入你的<span class="token operator">/</span>Blog文件夹找到并删除<span class="token punctuation">.</span>deploy_git文件夹<span class="token punctuation">;</span>然后在Git bash里依次输入<span class="token operator">:</span>git config <span class="token operator">--</span>global core<span class="token punctuation">.</span>autocrlf <span class="token boolean">false</span>hexo cleanhexo ghexo d如果还不行的话，可能是账户认证出现了问题，需要你输入：git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"邮箱"</span>git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"用户名"</span>最后再试试上传，看见INFO Deploy done： git就代表成功啦</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
             
         </tags>
       
