@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yswm-m.github.io/posts/8.html</loc>
+    
+    <lastmod>2022-09-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yswm-m.github.io/posts/19.html</loc>
     
     <lastmod>2022-09-19</lastmod>
@@ -66,13 +73,6 @@
   
   <url>
     <loc>https://yswm-m.github.io/posts/11.html</loc>
-    
-    <lastmod>2022-09-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yswm-m.github.io/posts/8.html</loc>
     
     <lastmod>2022-09-19</lastmod>
     
@@ -256,14 +256,14 @@
   </url>
   
   <url>
-    <loc>https://yswm-m.github.io/tags/%E4%BA%BA%E7%94%9F/</loc>
+    <loc>https://yswm-m.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-09-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yswm-m.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://yswm-m.github.io/tags/%E4%BA%BA%E7%94%9F/</loc>
     <lastmod>2022-09-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -305,13 +305,6 @@
   </url>
   
   <url>
-    <loc>https://yswm-m.github.io/tags/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2022-09-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yswm-m.github.io/tags/%E7%BB%83%E4%B9%A0/</loc>
     <lastmod>2022-09-19</lastmod>
     <changefreq>daily</changefreq>
@@ -320,6 +313,13 @@
   
   <url>
     <loc>https://yswm-m.github.io/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</loc>
+    <lastmod>2022-09-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yswm-m.github.io/tags/%E6%95%B0%E5%AD%A6/</loc>
     <lastmod>2022-09-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
