@@ -332,7 +332,7 @@
       <link href="/posts/10.html"/>
       <url>/posts/10.html</url>
       
-        <content type="html"><![CDATA[<pre><code class="bash">#include &lt;REGX52.H&gt;unsigned int 16位(单片机)，一般计算机上的int都是32位，前面的unsigned代表无符号，无符号int的范围是0~65535short 16位 -32768~32767long 32位 -2147483648~2147483647unsigned long int 32位 0~4294967295float 32位 3.4e-38~3.4e38double 64位 1.7e-308~1.7e308char 8位 -128~127unsigned char 8位 0~255//0亮 1不亮//让第一个LED亮起P2 = 0xFE; //1111 1110//延时500毫秒,也就是半秒Delaylms(1000);//让第二个亮起P2 = 0xFD; //1111 1101//延时Delaylms(1000);//让第三个亮起P2 = 0xFB; //1111 1011//延时Delaylms(N);//让第四个亮起P2 = 0xF7; //1111 0111//延时Delaylms(N);//让第五个亮起P2 = 0xEF; //1110 1111//延时Delaylms(N);//让第六个亮起P2 = 0xDF; //1101 1111//延时Delaylms(N);//让第七个亮起P2 = 0xBF; //1011 1111//延时Delaylms(N);//让第八个亮起P2 = 0x7F; //0111 1111//延时Delaylms(N);keil配置新建项目为:Microchip下的AT89C52//要驱动52的开发板必须要引入这个头文件#include &lt;REGX52.H&gt;//用_nop_()函数需要用到这个头文件#include &lt;INTRINS.H&gt;STC-lSP配置单片机型号选择:STC89C52RC/LE52RC串口号选择:USB-SERTAL CH340(COM5)打开程序文件，下载/编程到单片机寄存器通过检测高低电平检测按键是否被按下</code></pre>]]></content>
+        <content type="html"><![CDATA[<pre><code class="cpp">#include &lt;REGX52.H&gt;unsigned int 16位(单片机)，一般计算机上的int都是32位，前面的unsigned代表无符号，无符号int的范围是0~65535short 16位 -32768~32767long 32位 -2147483648~2147483647unsigned long int 32位 0~4294967295float 32位 3.4e-38~3.4e38double 64位 1.7e-308~1.7e308char 8位 -128~127unsigned char 8位 0~255//0亮 1不亮//让第一个LED亮起P2 = 0xFE; //1111 1110//延时500毫秒,也就是半秒Delaylms(1000);//让第二个亮起P2 = 0xFD; //1111 1101//延时Delaylms(1000);//让第三个亮起P2 = 0xFB; //1111 1011//延时Delaylms(N);//让第四个亮起P2 = 0xF7; //1111 0111//延时Delaylms(N);//让第五个亮起P2 = 0xEF; //1110 1111//延时Delaylms(N);//让第六个亮起P2 = 0xDF; //1101 1111//延时Delaylms(N);//让第七个亮起P2 = 0xBF; //1011 1111//延时Delaylms(N);//让第八个亮起P2 = 0x7F; //0111 1111//延时Delaylms(N);keil配置新建项目为:Microchip下的AT89C52//要驱动52的开发板必须要引入这个头文件#include &lt;REGX52.H&gt;//用_nop_()函数需要用到这个头文件#include &lt;INTRINS.H&gt;STC-lSP配置单片机型号选择:STC89C52RC/LE52RC串口号选择:USB-SERTAL CH340(COM5)打开程序文件，下载/编程到单片机寄存器通过检测高低电平检测按键是否被按下</code></pre>]]></content>
       
       
       <categories>
@@ -461,33 +461,6 @@
     
     
     <entry>
-      <title>人生感悟</title>
-      <link href="/posts/4.html"/>
-      <url>/posts/4.html</url>
-      
-        <content type="html"><![CDATA[<p>文章内容:</p><h3>混一天和努力一天，一天看不出任何差别，三天看不到任何变化，七天也看不到任何距离……</h3><h3>但是一个月后会看到话题不同，三个月后会看到气场不同，半年后会看到距离不同，一年后会看到人生道路截然不同。请坚信你所喜爱的事物！</h3><h3>世界上有10种人，一种是懂二进制的，另一种是不懂二进制的~</h3><h3>自卑和傲慢是一回事，你潜意识里瞧不起无能的人，才会觉得别人也可能瞧不起无能的你。</h3><h3>走过弯路，回头才有可能看清直路。人的一生，痛苦和骄傲都应拥有</h3><h3>有很多事，不是你放不下，就一定要勉强举着，这样只会一点点消磨你对它的热爱。——《棋魂》</h3><h3>我深怕自己本非美玉，故而不敢加以刻苦琢磨，却又半信自己是块美玉，故又不肯庸庸碌碌，与瓦砾为伍。于是我渐渐地脱离凡尘，疏远世人，结果便是一任愤懑与羞恨日益助长内心那怯弱的自尊心。</h3><h3>对未来的真正慷慨，是把一切献给现在。——加缪</h3><h3>说花美就会有人说“也有不美的花”。 预想到会有这种抱怨于是写“既有美丽的花也有不美的花”。这已经是废话了。 让所有人都认同的文字称不上表达。表达需要勇气。——铃木光司</h3><h3>真正的力量，永远不会属于天生就强壮过人，敏捷过人，聪明过人的家伙，绝不，它只会属于...愿意不惜一切达成目地的人。——希尔科</h3><h2 id="这是一生雾梦的个人博客"><a href="#这是一生雾梦的个人博客" class="headerlink" title="这是一生雾梦的个人博客"></a>这是一生雾梦的个人博客</h2><h2 id="以后会更新很多的内容"><a href="#以后会更新很多的内容" class="headerlink" title="以后会更新很多的内容"></a>以后会更新很多的内容</h2><h2 id="欢迎你收藏本网址"><a href="#欢迎你收藏本网址" class="headerlink" title="欢迎你收藏本网址"></a>欢迎你收藏本网址</h2><h2 id="有问题请跳转到：百度"><a href="#有问题请跳转到：百度" class="headerlink" title="有问题请跳转到：百度"></a>有问题请跳转到：<a href="https://www.baidu.com/">百度</a></h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 生活 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 想法 </tag>
-            
-            <tag> 人生 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>C++自学笔记</title>
       <link href="/posts/5.html"/>
       <url>/posts/5.html</url>
@@ -507,6 +480,33 @@
             <tag> 教程 </tag>
             
             <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>人生感悟</title>
+      <link href="/posts/4.html"/>
+      <url>/posts/4.html</url>
+      
+        <content type="html"><![CDATA[<p>文章内容:</p><h3>混一天和努力一天，一天看不出任何差别，三天看不到任何变化，七天也看不到任何距离……</h3><h3>但是一个月后会看到话题不同，三个月后会看到气场不同，半年后会看到距离不同，一年后会看到人生道路截然不同。请坚信你所喜爱的事物！</h3><h3>世界上有10种人，一种是懂二进制的，另一种是不懂二进制的~</h3><h3>自卑和傲慢是一回事，你潜意识里瞧不起无能的人，才会觉得别人也可能瞧不起无能的你。</h3><h3>走过弯路，回头才有可能看清直路。人的一生，痛苦和骄傲都应拥有</h3><h3>有很多事，不是你放不下，就一定要勉强举着，这样只会一点点消磨你对它的热爱。——《棋魂》</h3><h3>我深怕自己本非美玉，故而不敢加以刻苦琢磨，却又半信自己是块美玉，故又不肯庸庸碌碌，与瓦砾为伍。于是我渐渐地脱离凡尘，疏远世人，结果便是一任愤懑与羞恨日益助长内心那怯弱的自尊心。</h3><h3>对未来的真正慷慨，是把一切献给现在。——加缪</h3><h3>说花美就会有人说“也有不美的花”。 预想到会有这种抱怨于是写“既有美丽的花也有不美的花”。这已经是废话了。 让所有人都认同的文字称不上表达。表达需要勇气。——铃木光司</h3><h3>真正的力量，永远不会属于天生就强壮过人，敏捷过人，聪明过人的家伙，绝不，它只会属于...愿意不惜一切达成目地的人。——希尔科</h3><h2 id="这是一生雾梦的个人博客"><a href="#这是一生雾梦的个人博客" class="headerlink" title="这是一生雾梦的个人博客"></a>这是一生雾梦的个人博客</h2><h2 id="以后会更新很多的内容"><a href="#以后会更新很多的内容" class="headerlink" title="以后会更新很多的内容"></a>以后会更新很多的内容</h2><h2 id="欢迎你收藏本网址"><a href="#欢迎你收藏本网址" class="headerlink" title="欢迎你收藏本网址"></a>欢迎你收藏本网址</h2><h2 id="有问题请跳转到：百度"><a href="#有问题请跳转到：百度" class="headerlink" title="有问题请跳转到：百度"></a>有问题请跳转到：<a href="https://www.baidu.com/">百度</a></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 想法 </tag>
+            
+            <tag> 人生 </tag>
             
         </tags>
       
