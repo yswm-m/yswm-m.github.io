@@ -277,13 +277,6 @@
   </url>
   
   <url>
-    <loc>https://yswm-m.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-09-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yswm-m.github.io/tags/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2022-09-20</lastmod>
     <changefreq>daily</changefreq>
@@ -292,6 +285,13 @@
   
   <url>
     <loc>https://yswm-m.github.io/tags/linux/</loc>
+    <lastmod>2022-09-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yswm-m.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-09-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
