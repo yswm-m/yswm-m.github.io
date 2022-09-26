@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yswm-m.github.io/posts/2.html</loc>
+    <lastmod>2022-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://yswm-m.github.io/posts/6.html</loc>
+    <lastmod>2022-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://yswm-m.github.io/posts/7.html</loc>
+    <lastmod>2022-09-26</lastmod>
+  </url>
+  <url>
     <loc>https://yswm-m.github.io/posts/25.html</loc>
     <lastmod>2022-09-26</lastmod>
   </url>
@@ -30,10 +42,6 @@
   </url>
   <url>
     <loc>https://yswm-m.github.io/posts/9.html</loc>
-    <lastmod>2022-09-26</lastmod>
-  </url>
-  <url>
-    <loc>https://yswm-m.github.io/posts/6.html</loc>
     <lastmod>2022-09-26</lastmod>
   </url>
   <url>
@@ -102,14 +110,6 @@
   </url>
   <url>
     <loc>https://yswm-m.github.io/posts/4.html</loc>
-    <lastmod>2022-09-16</lastmod>
-  </url>
-  <url>
-    <loc>https://yswm-m.github.io/posts/7.html</loc>
-    <lastmod>2022-09-16</lastmod>
-  </url>
-  <url>
-    <loc>https://yswm-m.github.io/posts/2.html</loc>
     <lastmod>2022-09-16</lastmod>
   </url>
 </urlset> 
