@@ -424,13 +424,6 @@
 
   
   <url>
-    <loc>https://yswm-m.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-09-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yswm-m.github.io/tags/%E6%83%B3%E6%B3%95/</loc>
     <lastmod>2022-09-27</lastmod>
     <changefreq>daily</changefreq>
@@ -439,6 +432,13 @@
   
   <url>
     <loc>https://yswm-m.github.io/tags/%E4%BA%BA%E7%94%9F/</loc>
+    <lastmod>2022-09-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yswm-m.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-09-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -473,14 +473,14 @@
   </url>
   
   <url>
-    <loc>https://yswm-m.github.io/tags/linux/</loc>
+    <loc>https://yswm-m.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-09-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yswm-m.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://yswm-m.github.io/tags/linux/</loc>
     <lastmod>2022-09-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -529,13 +529,6 @@
   </url>
   
   <url>
-    <loc>https://yswm-m.github.io/tags/%E6%AF%94%E8%B5%9B/</loc>
-    <lastmod>2022-09-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yswm-m.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2022-09-27</lastmod>
     <changefreq>daily</changefreq>
@@ -549,17 +542,24 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://yswm-m.github.io/tags/%E6%AF%94%E8%B5%9B/</loc>
+    <lastmod>2022-09-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://yswm-m.github.io/categories/%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://yswm-m.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2022-09-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yswm-m.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <loc>https://yswm-m.github.io/categories/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2022-09-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
