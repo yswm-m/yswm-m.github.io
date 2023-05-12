@@ -375,13 +375,6 @@
   </url>
   
   <url>
-    <loc>https://yswm-m.github.io/tags/%E8%8B%B1%E8%AF%AD/</loc>
-    <lastmod>2023-05-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yswm-m.github.io/tags/%E6%95%B0%E5%AD%A6/</loc>
     <lastmod>2023-05-12</lastmod>
     <changefreq>daily</changefreq>
@@ -410,6 +403,13 @@
   </url>
   
   <url>
+    <loc>https://yswm-m.github.io/tags/%E8%8B%B1%E8%AF%AD/</loc>
+    <lastmod>2023-05-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yswm-m.github.io/tags/%E7%BB%83%E4%B9%A0/</loc>
     <lastmod>2023-05-12</lastmod>
     <changefreq>daily</changefreq>
@@ -431,6 +431,13 @@
   </url>
   
   <url>
+    <loc>https://yswm-m.github.io/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6/</loc>
+    <lastmod>2023-05-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yswm-m.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2023-05-12</lastmod>
     <changefreq>daily</changefreq>
@@ -446,13 +453,6 @@
   
   <url>
     <loc>https://yswm-m.github.io/tags/%E6%A1%88%E4%BE%8B/</loc>
-    <lastmod>2023-05-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yswm-m.github.io/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6/</loc>
     <lastmod>2023-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -489,14 +489,14 @@
   </url>
   
   <url>
-    <loc>https://yswm-m.github.io/categories/linux/</loc>
+    <loc>https://yswm-m.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2023-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yswm-m.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>https://yswm-m.github.io/categories/linux/</loc>
     <lastmod>2023-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
