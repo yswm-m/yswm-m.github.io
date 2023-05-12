@@ -1,0 +1,691 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Linux教程 | 一生雾梦</title><meta name="keywords" content="教程,笔记"><meta name="author" content="一生雾梦"><meta name="copyright" content="一生雾梦"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="文章内容: 通过VMware安装Ubuntu的linux镜像,可以在官网上下载,建议选择磁链下载快些 然后接下来可以看视频教程 在VMware所虚拟出来的Ubuntu系统镜像上进行操作 打开终端：ctrl+alt+t cat &#x2F;etc&#x2F;shells 查看当前目录下支持shell的文件 echo $SHELL 查看当前环境下的bash shell和bash的作用是一致的,都是用来执行命令 histo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux教程">
+<meta property="og:url" content="https://yswm-m.github.io/posts/10.html">
+<meta property="og:site_name" content="一生雾梦">
+<meta property="og:description" content="文章内容: 通过VMware安装Ubuntu的linux镜像,可以在官网上下载,建议选择磁链下载快些 然后接下来可以看视频教程 在VMware所虚拟出来的Ubuntu系统镜像上进行操作 打开终端：ctrl+alt+t cat &#x2F;etc&#x2F;shells 查看当前目录下支持shell的文件 echo $SHELL 查看当前环境下的bash shell和bash的作用是一致的,都是用来执行命令 histo">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6325c12016f2c2beb149597d.png">
+<meta property="article:published_time" content="2022-09-15T02:40:00.000Z">
+<meta property="article:modified_time" content="2022-09-30T10:26:54.869Z">
+<meta property="article:author" content="一生雾梦">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/6325c12016f2c2beb149597d.png"><link rel="shortcut icon" href="https://pic.imgdb.cn/item/631c5b8016f2c2beb1f6056e.jpg"><link rel="canonical" href="https://yswm-m.github.io/posts/10"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"一年之内的产物","messageNext":"技术可能存在过期"},
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":600},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 一生雾梦","link":"链接: ","source":"来源: 一生雾梦","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Linux教程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-09-30 18:26:54'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><link defer rel="stylesheet" href="/css/customm.css" ><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/icon.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/background.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/index_ee.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu@1.1.6/lib/clock.min.css" /><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="一生雾梦" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.imgdb.cn/item/631c5b8016f2c2beb1f6056e.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic.imgdb.cn/item/6325c12016f2c2beb149597d.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">一生雾梦</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Linux教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-15T02:40:00.000Z" title="发表于 2022-09-15 10:40:00">2022-09-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-30T10:26:54.869Z" title="更新于 2022-09-30 18:26:54">2022-09-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/linux/">linux</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>17分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Linux教程"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>文章内容:</p>
+<h3 id="通过VMware安装Ubuntu的linux镜像-可以在官网上下载-建议选择磁链下载快些">通过VMware安装Ubuntu的linux镜像,可以在<a target="_blank" rel="noopener" href="https://cn.ubuntu.com/download/desktop">官网</a>上下载,建议选择磁链下载快些</h3>
+<h3 id="然后接下来可以看视频教程">然后接下来可以看<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1fy4y1b7TC?share_source=copy_web&amp;vd_source=dce78a50a19b17e013b66f467ec9b153">视频</a>教程</h3>
+<pre><code class="language-cpp">在VMware所虚拟出来的Ubuntu系统镜像上进行操作
+打开终端：ctrl+alt+t
+cat /etc/shells 查看当前目录下支持shell的文件
+echo $SHELL 查看当前环境下的bash
+shell和bash的作用是一致的,都是用来执行命令
+history 查看历史记录
+按tab键可以补齐命令或者查找以某个字符开头的所有命令
+热键：ctrl+p 回到上一行命令  ctrl+n 回到下一行命令  ctrl+b 回到左边的命令  ctrl+f 回到右边的命令  对应上下左右，ctrl+a 回到行头  ctrl+e 回到行尾  ctrl+u 清空整行  ctrl+l 清屏   放大 ctrl+Shift 加上'+'号    缩小 ctrl+ '-'号
+cd .. 回到上一级目录
+pwd 查看当前目录
+ls 查看系统目录
+系统目录介绍：
+bin 存放可执行文件
+date 查看当前时间
+cd bin 进入bin目录
+ls 查看bin目录下的文件
+找到date可执行文件
+./date 执行date
+dev 设备目录 存放设备文件，如鼠标mice
+cd dev 进入dev目录
+ls 查看dev目录下的文件
+echo mice 查看鼠标设备文件
+sudo cat mice 进入鼠标设备文件
+ctrl+c 退出
+etc 用户配置文件
+cd etc 进入etc文件
+ls 查看etc目录下的文件
+vi passwd 查看用户密码信息
+ls ../ 查看当前目录的上一级目录下的文件夹
+ls /home 查看home目录下的文件夹
+ls / 查看根目录下的文件夹
+ls -lah /home 查看home目录下的文件夹大小和时间，如果是d开头则代表是一个文件夹，如果是-开头则代表是一个文件
+ls -a 查看当前目录下的隐藏文件
+cd ~ 回到家目录
+cd /etc/bin/ 通过绝对路径进入到ect目录下的bin文件夹
+mkdir mydir 在当前目录下创建一个mydir目录
+mkdir -p a/b/c 在当前目录下创建一个a文件夹，a文件夹里再创建一个b文件夹，b文件夹里再创建一个c文件夹
+sudo apt install tree 下载tree工具
+tree a/ 查看a目录的所有文件结构
+cd mydir/ 进入mydir目录
+mkdir a/ b/ c/ 创建多个文件夹
+rm -rf * 删除当前目录下的所有文件夹
+touch linux.txt 在当前目录创建一个.txt文件
+touch ../linux 在上一级目录创建一个linux文件
+touch /home/bing/myfile 通过绝对路径在home下的bing目录下创建一个myfile文件
+rm file01 删除当前目录下的file01文件
+rm /home/bing/file02 通过绝对路径删除bing目录下的file02文件
+rm -rf a/ 删除当前路径下的a文件夹
+rm -rf /home/bing/a/ 通过绝对路径删除home下的bing目录下a文件夹
+cp linux bak/ 将当前目录下的linux文件复制到bak/目录下
+cp -r abc/ bak/ 将当前目录下的abc/文件夹复制到bak/目录下
+clear 清屏
+mv linux bak/ 将当前目录下的linux文件移动到bak/文件夹下
+cd bak/ 进入bak目录
+mv linux linux007 将当前目录下的linux文件重命名为linux007
+mv /home/bing/bak/linux007 . 通过绝对路径将home下的bing下的bak下的linux007文件移动到家目录下
+man ls 查看Linux下的关于ls的所有命令手册
+help cd 查看LInux下的关于cd的所有命令手册
+man man 查看Linux下的关于man的所有命令手册
+reboot 重启Linux系统
+shutdown -h now 关机
+vim
+在目录下输入:vim linux007 进入vim编译linux007文件的界面
+进入到编译界面后输入 i 表示编辑这个文件
+在输入完代码后按下esc键退出编辑 然后输入':'号，再输入w，然后回车，当命令提示后输入y ,确定保存,回车
+输入':' q 回车 退出vim
+在目录下输入:gedit linux007 进入到gedit编译linux007文件的界面
+然后在里面编辑文件，可以直接点击保存，关闭
+在目录下输入:nano linux007 进入到nano编译linux007文件的界面
+然后输入ctrl+o编辑文件名 回车 编辑文件，然后ctrl+s保存文件 ctrl+x退出
+换源
+更新清华源:
+vim /etc/apt/sources.list 查看当前源
+sudo cp /etc/apt/sources.list sources.list.bak 备份源
+https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/ 进入位置复制对应的版本的文件
+sudo vim /etc/apt/sources.list 打开配置文件，按esc键后，先按gg,再按dG，将文本全部删除，然后复制上面网站中的内容
+sudo apt-get update 更新软件源
+sudo apt-get upgrade 读取软件列表，保存在本地电脑
+gcc
+
+在终端下输入:sudo apt update 然后输入密码，安装管理软件的包，sudo代表切换当前用户从switch user切换为root，apt update代表管理软件的包
+sudo apt install build-essential gdb 安装gdb调试器
+gcc --version 查看gcc是否安装成功
+g++ --version 查看g++是否安装成功
+gdb --version 查看gdb是否安装成功
+sudo apt install cmake 安装cmake
+cmake --version 查看cmake是否安装成功
+sudo apt-get install fcitx 安装搜狗输入法
+编译
+gcc编译c++文件有4步:
+.c/.cpp &gt;&gt;编译器(预编译)&gt;&gt;.i&gt;&gt;编译器(编译)&gt;&gt;.s&gt;&gt;汇编器&gt;&gt;.o&gt;&gt;连接器&gt;&gt;可执行文件
+cd testcpp/ 进入testcpp文件夹
+vim test.cpp 创建一个名为test.cpp的文件并通过vim编辑器进入
+:set ts=4 回车 将tab键的宽度从默认的8改为4
+按下 i 键进入输入模式
+输入完代码后按esc退出 ，然后输入 :wq 保存并退出
+退出到终端后输入 g++ test.cpp -o test 回车编译并链接test.cpp文件
+输入ls 查看当前目录下的可执行文件,可执行文件颜色为绿色
+输入 ./test 执行test可执行文件
+rm test 删除可执行文件
+g++ -E test.cpp -o test.i  将test编译为预处理文件
+vim test.i 查看预处理文件
+g++ -S test.i -o test.s 将test.i预处理文件编译成汇编语言文件
+vim test.s 查看汇编语言文件
+g++ -c test.s -o test.o 将汇编语言文件编译成机器语言的二进制可识别文件
+vim test.o 查看机器语言二进制文件
+g++ test.o -o test 将机器语言的二进制文件编译成可执行文件
+./test 运行可执行文件
+g++ -g test.cpp -o test 产生一个能被调试的可执行文件test
+g++ test.cpp -o2 -o test_o2 使用-o2优化代码，并生成test_o2可执行文件
+ls -lh 查看两个可执行文件的大小
+./test_o2 执行o2优化后的可执行文件
+time ./test 通过time查看未优化的可执行文件的执行时间 real
+time ./test_o2 通过time查看优化后的可执行文件的执行时间 real
+g++ -lglog test.cpp 链接glog库，通过-l
+g++ -L/home/bing/mytestlibfolder -lmytest test.cpp 链接mytest库，通过-L加上库的绝对路径，再通过-l链接库
+g++ -I/myinclude test.cpp 指定头文件所在的目录，在相对路径前面加上大写的i
+g++ -Wall test.cpp 打印警告信息
+g++ -w test.cpp 关闭警告信息
+g++ -std=c++11 test.cpp 设置c++编译标准编译test.cpp
+g++ test.cpp -o test 编译并指定输出文件名，将原本的a.out重命名为test
+g++ -DDEBUG test.cpp 如果在.cpp文件里定义了:
+#ifdef DEBUG
+cout&lt;&lt;"DEBUG"&lt;&lt;endl;
+#endif
+那么执行上面的命令，在#ifdef DEBUG里的代码就会被执行
+man gcc 查看gcc的英文手册
+ sudo apt install tree -y 下载tree查看目录文件
+tree . 查看当前目录的结构
+分文件编译
+在根目录下创建Demo01文件夹，Demo01文件夹下分别创建include文件夹和src文件夹，在include文件夹创建swap.h头文件，在src文件夹下创建swap.cpp文件，最后再在Demo01文件夹下创建main.cpp文件
+g++ main.cpp src/swap.cpp -Iinclude 分文件编译main.cpp文件，main.cpp文件里面引入了swap.h文件，再通过src/swap.cpp指定swap.cpp文件的目录，而swap.cpp文件里又引入了swap.h头文件，所以需要通过-I指定头文件目录
+./a.out 运行可执行文件
+g++ main.cpp src/swap.cpp -Iinclude -Wall -std=c++11 -o b.out 重新生成可执行文件，加上报错提示信息和c++标准，并且把原本的a.out重命名为b.out
+./b.out 运行可执行文件
+rm *.out 将以.out结尾的文件全部删除
+将swap.cpp文件生成静态库文件
+在 Linux 中，库文件分成静态库和共享库两种➀。静态库以.a 作为后缀名，共享库以.so 结尾。所 有库都是一些函数打包后的集合，
+差别在于静态库每次被调用都会生成一个副本，而共享库则只有 一个副本，更省空间。
+静态库最后都会被集成到可执行文件中，动态库不会
+cd src/ 进入src文件夹
+g++ swap.cpp -c -I../include 将swap.cpp生成swap.o汇编文件，-I后面指定的是头文件目录
+ar rs libswap.a swap.o 将swap.o汇编文件生成swap.a静态库文件，lib后面就是要生成的库文件名
+cd .. 回到上级目录
+g++ main.cpp -lswap -Lsrc -Iinclude -o static_main 编译main.cpp并链接静态库文件，-l后面指定静态库名称，-L后面指定静态库的路径，-I后面指定头文件目录，-o将文件重命名为static_main可执行文件
+./static_main 运行可执行文件
+cd src/ 进入src文件夹
+rm swap.o 删除.o汇编文件
+g++ swap.cpp -I../include -fPIC -shared -o Iibswap.so 用swap.cpp生成swap.so的动态库，-I后面是头文件的目录
+cd .. 回到上一级目录
+同时有动态和静态库存在时会优先链接动态库
+g++ main.cpp -Iinclude -lswap -Lsrc -o dyna_main 编译main.cpp文件，并且链接到src下的动态库，将生成的可执行文件重命名为dyna_main
+ls -l 查看当前目录下的文件的字节数
+LD_LTBRARY_PATH=src ./dyna_main 执行动态库的可执行文件，其中src是动态库所在的目录
+gdb
+常用命令：
+h 查看命令帮助
+r 运行文件(run-text:加载文本文件，run-bin:加载二进制文件)
+start 单步执行(停在第一行执行语句)
+l 查看源代码(list-n:从第n行开始查看代码，list+函数名:查看具体函数)
+set 设置变量的值
+n 单步调试(逐过程)
+s 单步调试(逐语句:跳入自定义函数内部执行)
+bt 查看函数的调用栈和层级关系
+f 切换函数的栈
+i 查看函数内部局部变量的数值
+finish 结束当前函数，返回到函数调用点
+c 继续运行
+p 打印值和地址
+quit 退出gdb
+b+n 在第n行设置断点
+i b 查看当前设置的所以断点
+d breakpoints n 删除第n个断点
+display 监视变量
+undisplay 取消监视变量
+watch 被监视的变量发生修改时,打印显示
+i watch 显示监视的变量
+enable breakpoints 启用断点
+disable breakpoints 禁用断点
+x 查看内存
+run argv[1] argv[2] 调试时给命令行传参
+set follow-fork-mode child#Makefile 项目管理:跟踪父子进程
+在根目录新建一个Demo02文件夹，在里面用vim新建一个test01.cpp文件
+:set nu 显示行号
+分屏回到上一级目录下 g++ test01.cpp -o a_no_g 生成a_no_g可执行文件
+然后再 g++ -g test01.cpp -o a_yes_g 生成a_yes_g带调试器的可执行文件
+ls -l 查看两个可执行文件的大小
+gdb a_no_g 进入调试可执行文件的界面，提示无法调试没有调试器的文件
+quit 退出gdb调试界面
+gdb a_yes_g 进入调试带调试器的可执行文件界面
+//gdb打开后 ctrl-x ctrl-a 进入tui模式 比开两个窗口好多了
+//也可以直接使用命令 gdbtui - q 要调试的文件名称
+run 执行代码
+break 13 在代码的第13行打一个断点
+info breakpoints 提示断点的信息
+b 14 在代码的第14行打一个断点
+i b 提示断点的信息
+quit 退出gdb
+gdb a_yes_g 重新进入调试界面
+b 13 在代码13行打一个断点
+r 运行程序
+p i 查看i变量的值
+p N 查看N变量的值
+continue 继续执行
+p i 查看i变量的值，因为是在一个循环里面，所以每次都会撞上那个断点，而i是不停变化的
+display i 不断的监视i变量的值
+c 继续执行
+回车 按下回车键会继续执行上一次命令，跟c的效果是一样的
+//n 一行一行执行
+list 查看断点周围的代码
+l  查看断点周围的代码
+display sum 监视sum变量
+c 继续执行
+quit 退出程序
+vscode
+在浏览器输入 https://code.visualstudio.com/ 进入vscode官网下载linux版本并安装
+快捷键：alt+'↑'，alt+'↓'，将某一行上下移动
+ctrl+` 打开终端
+ctrl+shift+p 打开命令面板
+ctrl+p 转到其他文件
+ctrl+w 关闭当前文件
+ctrl+b 关闭侧边栏
+F2 变量统一重命名
+F12 转到定义处
+ctrl+shift+F 在整个文件夹中查找
+ 在桌面新建一个C++文件夹，然后 cd C++进入该文件夹，然后 code . 用vscode打开该文件夹
+在文件夹中新建一个helloworld.cpp的文件
+写完代码后在终端: g++ helloworld.cpp -o helloworld 生成可执行文件
+然后 ./helloworld 运行
+分文件编译：在根目录新建include文件夹和src文件夹，然后在include文件夹新建swap.h文件，在src文件夹新建swap.cpp文件，然后在根目录新建main.cpp文件，写完代码后打开终端输入：g++ main.cpp src/swap.cpp -Iinclude -o main 生成可执行文件
+然后./main 运行
+如果一个文件在打开的时候会被下一个打开的文件覆盖掉，那么就在打开的文件的名字上双击就可以固定
+ctrl+shift+i 格式化
+F2 将所有文件的某个函数名字重命名
+CMake
+gcc实际编译，make是构建工具，cmake是跨平台自动化工具
+cmake语法:参数之间使用空格或者分号隔开，指令不区分大小写，参数和变量区分大小写
+指令：cmake_minimum_required(VERSION 3.0) 指定cmake最低版本
+project(HELLO) 定义工程名称为HELLO
+set(SRC sayhello.cpp hello.cpp) 定义SRC变量，其值为main.cpp hello.cpp
+include_directories(/usr/include ./include) 将/usr/include 和 ./include添加到头文件路径搜索
+link_directories(/usr/lib ./lib) 将/usr/lib 和./lib添加到库文件搜索路径
+add_library(hello SHARED ${SRC}) 通过变量SRC生成libhello.so动态库
+add_library(hello STATIC ${SRC}) 通过变量SRC生成libhello.a静态库
+add_compile_options(-Wall -std=c++11 -o2) 添加编译参数 -Wall报错提示 c++11标准 -o2优化
+add_executable(main main.cpp) 编译main.cpp生成可执行文件main
+target_link_libraries(main hello) 将hello动态库文件链接到可执行文件main
+add_subdirectory(src) 添加src子目录,src中需有一个CMakeLists.txt文件
+aux_source_directory(. SRC) 定义SRC变量，其值为当前目录下所有源代码文件
+add_executable(main ${SRC}) 编译SRC变量所代表的源代码文件,生成main可执行文件
+常用变量: CMAKE_CXX_FLAGS g++编译选项
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11") 在CMAKE_CXX_FLAGS编译选项后追加-std=c++11
+set(CMAKE_BUILD_TYPE Debug) 设定编译类型为debug，可调试
+set(CMAKE_BUILD_TYPE Release) 设定编译类型为release，可发布
+Debug自动加-g参数，Release会加上o3优化以及关闭debug调试
+CMAKE_C_COMPILER 指定C编译器
+CMAKE_CXX_COMPILER 指定C++编译器
+EXECUTABLE_OUTPUT_PATH 可执行文件输出的存放路径
+LIBRARY_OUTPUT_PATH 库文件输出的存放路径
+cmake案例:
+用vscode在文件夹下新建一个文件名为: CMakeLists.txt
+cmake_minimum_required(VERSION 3.0) 指定cmake的最低版本
+project(HELLOWORLD) 指定项目名称
+add_executable(helloWorld_cmake helloworld.cpp) 指定编译的源文件，helloWorld_cmake是要生成的可执行文件名
+在终端输入：cmake . 对当前目录下的cmake进行编译
+在终端输入：make 生成可执行文件
+./helloWorld_cmake 运行
+将其他的文件删除然后在终端输入: mkdir build 新建文件夹
+cd build/ 进入文件夹
+cmake .. 通过外部构建的方式构建项目，两个点代表在上一层查找CMakeLists.txt文件
+make 生成可执行文件
+./helloWorld_cmake 运行
+进入分文件编写的文件夹
+在文件夹里面新建CMakeLists.txt文件
+cmake_minimum_required(VERSION 3.0) 设置最低版本
+project(SWAP) 指定项目名称
+include_directories(include) 指定头文件存放的目录
+add_executable(main_cmake main.cpp src/swap.cpp) 生成可执行文件 main_cmake是要生成的可执行文件名，main.cpp是源文件，src/swap.cpp是分文件的目录
+mkdir build2 创建启动文件夹
+cd build2/ 进入启动文件夹
+cmake .. 启动项目
+make 生成可执行文件
+ls 查看文件
+./main_cmake 运行
+实战
+新建一个文件夹 mkdir Project
+cd Project/ 进入文件夹
+code . 用vscode打开该文件夹
+pwd 查看当前文件夹所在路径
+分别创建include和src文件夹，在include文件夹中创建Gun.h头文件，在src文件夹中创建Gun.cpp文件，写完代码后在include文件夹中再创建一个Soldier.h头文件，在src文件夹中再创建一个Solider.cpp文件，写完代码后再在上一级目录下新建一个main.cpp文件，编写完代码后打开终端输入: g++ main.cpp src/Gun.cpp src/Solider.cpp -Iinclude -o myexe -Wall -g -o2
+./myexe 运行
+在目录下新建 CMakeLists.txt文件
+cmake_minimum_required(VERSION 3.0) 指定cmake版本
+project(SOLIDERFIRE) 指定项目名称
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -Wall") 为编译添加优化选项
+set(CMAKE_BUILD_TYPE Debug) 为编译添加调试选项
+include_directories(${CMAKE_SOURCE_DIR}/include) 添加头文件目录
+add_executable(my_cmake_exe main.cpp src/Gun.cpp src/Solider.cpp)
+mkdir build 新建启动文件夹
+cd build/ 进入文件夹
+cmake .. 编译项目
+make 生成可执行文件
+./my_cmake_exe 运行
+配置vscode
+点击vscode侧边栏的调试按钮，点击run运行，点击C(GDB/LLDB)，再点击g++ -生成和调试活动文件 点击Abort生成launch.json文件
+将"program"字段改成: "program":"${workspaceFolder}/build/my_cmake_exe", 代表可执行文件的路径
+新建一个tasks.json文件
+</code></pre>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">一生雾梦</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://yswm-m.github.io/posts/10.html">https://yswm-m.github.io/posts/10.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://yswm-m.github.io" target="_blank">一生雾梦</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></div><div class="post_share"><div class="social-share" data-image="https://pic.imgdb.cn/item/6325c12016f2c2beb149597d.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/11.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.imgdb.cn/item/631c5b7f16f2c2beb1f60562.png" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Kali教程</div></div></a></div><div class="next-post pull-right"><a href="/posts/9.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.imgdb.cn/item/6325c19716f2c2beb149ee4d.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">动态规划</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/7.html" title="C++自学笔记"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.imgdb.cn/item/631c5b7f16f2c2beb1f60567.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-15</div><div class="title">C++自学笔记</div></div></a></div><div><a href="/posts/13.html" title="Mongodb教程"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.imgdb.cn/item/6325c0c116f2c2beb148de58.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-15</div><div class="title">Mongodb教程</div></div></a></div><div><a href="/posts/12.html" title="MySQL教程"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.imgdb.cn/item/6325c0a516f2c2beb148baa3.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-15</div><div class="title">MySQL教程</div></div></a></div><div><a href="/posts/11.html" title="Kali教程"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.imgdb.cn/item/631c5b7f16f2c2beb1f60562.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-15</div><div class="title">Kali教程</div></div></a></div><div><a href="/posts/14.html" title="单片机教程"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.imgdb.cn/item/6325c15216f2c2beb149973e.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-15</div><div class="title">单片机教程</div></div></a></div><div><a href="/posts/29.html" title="C++小案例-职工管理系统"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic1.imgdb.cn/item/6325c1bb16f2c2beb14a1b9b.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-15</div><div class="title">C++小案例-职工管理系统</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.imgdb.cn/item/631c5b8016f2c2beb1f6056e.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">一生雾梦</div><div class="author-info__description">欢迎光临我的个人博客!</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://yswm-m.github.io/about/"><i class="fa fa-heart"></i><span>个人主页</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yswm-m/yswm-m.github.io.git" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=3269661045&amp;website=www.qtxml.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">我一直喜欢那些不被看好的人成功的故事，我想成为其中一个故事的一部分。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87VMware%E5%AE%89%E8%A3%85Ubuntu%E7%9A%84linux%E9%95%9C%E5%83%8F-%E5%8F%AF%E4%BB%A5%E5%9C%A8%E5%AE%98%E7%BD%91%E4%B8%8A%E4%B8%8B%E8%BD%BD-%E5%BB%BA%E8%AE%AE%E9%80%89%E6%8B%A9%E7%A3%81%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%BF%AB%E4%BA%9B"><span class="toc-number">1.</span> <span class="toc-text">通过VMware安装Ubuntu的linux镜像,可以在官网上下载,建议选择磁链下载快些</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%84%B6%E5%90%8E%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%8F%AF%E4%BB%A5%E7%9C%8B%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">然后接下来可以看视频教程</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/35.html" title="C++设计模式（单例模式）"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic1.imgdb.cn/item/6325c0f816f2c2beb14925fa.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="C++设计模式（单例模式）"/></a><div class="content"><a class="title" href="/posts/35.html" title="C++设计模式（单例模式）">C++设计模式（单例模式）</a><time datetime="2022-09-30T02:40:00.000Z" title="发表于 2022-09-30 10:40:00">2022-09-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/34.html" title="C++11（lambad表达式）"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic1.imgdb.cn/item/631c5b9d16f2c2beb1f6243c.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="C++11（lambad表达式）"/></a><div class="content"><a class="title" href="/posts/34.html" title="C++11（lambad表达式）">C++11（lambad表达式）</a><time datetime="2022-09-29T02:30:00.000Z" title="发表于 2022-09-29 10:30:00">2022-09-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/33.html" title="C++11（RAll智能指针）"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic1.imgdb.cn/item/6325c0b416f2c2beb148cd51.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="C++11（RAll智能指针）"/></a><div class="content"><a class="title" href="/posts/33.html" title="C++11（RAll智能指针）">C++11（RAll智能指针）</a><time datetime="2022-09-28T02:28:00.000Z" title="发表于 2022-09-28 10:28:00">2022-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/36.html" title="C++11(auto自动识别变量类型)"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic1.imgdb.cn/item/6325c1cf16f2c2beb14a3620.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="C++11(auto自动识别变量类型)"/></a><div class="content"><a class="title" href="/posts/36.html" title="C++11(auto自动识别变量类型)">C++11(auto自动识别变量类型)</a><time datetime="2022-09-28T02:26:00.000Z" title="发表于 2022-09-28 10:26:00">2022-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/28.html" title="ACM 2022级招新线上预选赛"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.imgdb.cn/item/6325c2e616f2c2beb14bcddf.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="ACM 2022级招新线上预选赛"/></a><div class="content"><a class="title" href="/posts/28.html" title="ACM 2022级招新线上预选赛">ACM 2022级招新线上预选赛</a><time datetime="2022-09-28T02:11:00.000Z" title="发表于 2022-09-28 10:11:00">2022-09-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023  <i id="heartbeat" class="fa fas fa-heartbeat"></i> 一生雾梦</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></head></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'OBentvFDdYCjDtgVNmfCFoR5-gzGzoHsz',
+      appKey: '4vs5nkvhufEA3U13zkg9v8HD',
+      placeholder: '畅所欲言！',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: 'obentvfd.lc-cn-n1-shared.com',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'https://yswm-m.github.io/posts/10.html'
+    this.page.identifier = 'posts/10.html'
+    this.page.title = 'Linux教程'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://yswm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Valine' === 'Disqus' || !true) {
+  if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script defer id="dsq-count-scr" src="//xianqi.disqus.com/count.js" async></script><script defer type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/js/animate.js"></script><div class="aplayer no-destroy" data-id="2325095663" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="auto" data-autoplay="true" muted></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script>window.$crisp = [];
+window.CRISP_WEBSITE_ID = "eacd1468-ecff-4177-8b4d-d08c9ff1a7f4";
+(function () {
+  d = document;
+  s = d.createElement("script");
+  s.src = "https://client.crisp.chat/l.js";
+  s.async = 1;
+  d.getElementsByTagName("head")[0].appendChild(s);
+})();
+$crisp.push(["safe", true])
+
+if (false) {
+  $crisp.push(["do", "chat:hide"])
+  $crisp.push(["on", "chat:closed", function() {
+    $crisp.push(["do", "chat:hide"])
+  }])
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      $crisp.push(["do", "chat:show"])
+      $crisp.push(["do", "chat:open"])
+
+    });
+  }
+  chatBtnFn()
+} else {
+  if (false) {
+    function chatBtnHide () {
+      $crisp.push(["do", "chat:hide"])
+    }
+    function chatBtnShow () {
+      $crisp.push(["do", "chat:show"])
+    }
+  }
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu@1.1.6/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var qweather_key = 'b16a1fa0e63c46a4b8f28abfb06ae3fe';
+  var gaud_map_key = 'e2b04289e870b005374ee030148d64fd&s=rsv3';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '112.6534116,27.96920845';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu@1.1.6/lib/clock.min.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
